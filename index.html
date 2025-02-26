@@ -39,13 +39,14 @@
     <!-- favicon 설정 -->
 
     <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css" type="text/css" />
-    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" type="text/css" />
     <link rel="stylesheet" href="css/layout.css" type="text/css" />
     <link rel="stylesheet" href="css/aos.css" type="text/css" />
 
@@ -58,7 +59,7 @@
     <title>patra</title>
   </head>
   <body>
-    <div id="wrap" class="main">
+    <div class="patra-wrap">
       <div class="skip-nav">
           <ul>
               <li><a href="#container">본문 바로가기</a></li>
@@ -66,7 +67,7 @@
               <li><a href="#footer">푸터 바로가기</a></li>
           </ul>
       </div>
-      <header id="header">
+      <header id="header" class="header">
           <div class="header-inner">
               <h1><a href="">파트라</a></h1>
               <div class="m-menu">                    
@@ -74,34 +75,115 @@
                       <div class="menu-line"></div>
                   </div>
               </div>
-              <nav id="gnav">
-                  <ul class="gnav-list">
-                      <li><a href="">회사소개</a></li>
-                      <li><a href="">사업분야</a></li>
-                      <li><a href="">채용</a></li>
-                      <li><a href="">홍보</a></li>
-                      <li><a href="">새로운소식</a></li>
-                  </ul>
-              </nav>  
+              <div class="gnav-wrap flex align-center">
+                <nav id="gnav">
+                    <ul class="gnav-list">
+                        <li class="nav-item is-parent is-open">
+                            <span class="nav-link"><a href="" class="en">product</a></span>
+                            <div class="megamenu-content">
+                                <div class="sub-menu-list">
+                                    <ul class="sub-menu flex">
+                                        <li>
+                                            <img src="" alt="">
+                                            <span>product1</span>
+                                        </li>
+                                        <li>
+                                            <img src="" alt="">
+                                            <span>product2</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="view-all">
+                                    <a href="" class="flex items-center justify-center">
+                                        <span>VIEW ALL</span> <i class="bi bi-chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>                        
+                        </li>
+                        <li class="nav-item is-parent">
+                            <span class="nav-link"><a href="" class="en">library</a></span>
+                            <div class="megamenu-content">
+                                <div class="sub-menu-list">
+                                    <ul class="sub-menu flex">
+                                        <li>
+                                            <img src="" alt="">
+                                            <span>product1</span>
+                                        </li>
+                                        <li>
+                                            <img src="" alt="">
+                                            <span>product2</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>                        
+                        </li>
+                        <li class="nav-item is-parent">
+                            <span class="nav-link"><a href="" class="en">about us</a></span>
+                            <div class="megamenu-content">
+                                <div class="sub-menu-list">
+                                    <ul class="sub-menu flex">
+                                        <li>
+                                            <img src="" alt="">
+                                            <span>product1</span>
+                                        </li>
+                                        <li>
+                                            <img src="" alt="">
+                                            <span>product2</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>                        
+                        </li>
+                        <li class="nav-item is-parent">
+                            <span class="nav-link"><a href="" class="en">contact us</a></span>
+                            <div class="megamenu-content">
+                                <div class="sub-menu-list">
+                                    <ul class="sub-menu flex">
+                                        <li>
+                                            <img src="" alt="">
+                                            <span>product1</span>
+                                        </li>
+                                        <li>
+                                            <img src="" alt="">
+                                            <span>product2</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>                        
+                        </li>
+                    </ul>
+                </nav>
+                <div class="search-wrap">                    
+                    <div class="search-box">
+                        <form action="">
+                            <label for="searchItem" class="hidden">검색어입력</label>
+                            <input id="searchItem" type="text">
+                            <button type="submit" title="검색"><i class="bi bi-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+              </div>  
           </div>
           <!--모바일 hav-->
           <div class="m-gnav">
               <h1><a href="">쿨앤쿨</a></h1>                
               <nav class="m-gnav">
                   <ul class="m-gnav-list">
-                      <li><a href="">회사소개</a></li>
-                      <li><a href="">사업분야</a></li>
-                      <li><a href="">채용</a></li>
-                      <li><a href="">홍보</a></li>
-                      <li><a href="">새로운소식</a></li>
+                    <li><a href="">product</a></li>
+                    <li><a href="">library</a></li>
+                    <li><a href="">about us</a></li>
+                    <li><a href="">contact</a></li>
                   </ul>
               </nav>  
               <button class="btn-menu-close" type="button" title="메뉴닫기"><i class="icon-sign03"></i></button>
           </div>
       </header>
-      <div id="container" class="main-container">
+      <div id="container" class="container">
+        <!--메인영역-->
+        <div class="main-container">
+          <link rel="stylesheet" href="css/main.css" type="text/css" />
           <div class="main-container-inner">
-              <section id="section01" class="section main-section sec-visual">
+              <section class="section main-section sec-visual">
                   <div class="main-visual">
                       <div class="swiper-wrapper">
                           <div class="swiper-slide">
@@ -139,47 +221,53 @@
               </section>
 
           </div>
+        </div>
       </div>
-      <footer id="footer">
+      <footer id="footer" class="footer">
         <div class="footer-inner">
-            <div class="f-container">
-                <ul class="f-info">
-                    <li>T.1688-0186</li>
-                    <li>A.서울특별시 서초구 강남대로51길 1 (서초동) 511 TOWER 4층</li>
-                    <li>E. help@coolncool.com</li>
-                    <li>F. 02-3474-7679</li>
-                </ul>                                
-                <ul class="f-contact">
-                    <li class="name">(주)쿨앤쿨</li>
-                    <li>대표이사 : 곽상준</li>
-                    <li>사업자 번호 : 116-81-6768</li>
-                    <li>소프트웨어사업자 : 제 818-146851호</li>
-                    <li>통신판매업 : 제 2012-서울서초-1278호</li>
-                    <li>건강기능식품판매업 : 서초구청 수지 505호</li>
-                    <li>의료기기판매업 : 서초구 보건소 3505호</li>
-                    <li>서비스표 등록 : 특허청 제 41-0095786호</li>
-                </ul>
-
-                <div class="f-outer-link">
-                    <div class="f-family-site">
-                        <button type="button">FAMILY SITE <i class="icon-sign01"></i></button>
-                        <div class="family-site-list">
-                            <ul>
-                                <li><a href="" target="_blank">파워샵</a></li>
-                                <li><a href="" target="_blank">비주얼리스트</a></li>
-                                <li><a href="" target="_blank">디마인드</a></li>
-                                <li><a href="" target="_blank">디마인드 공식스토어</a></li>
-                                <li><a href="" target="_blank">애경 공식스토어</a></li>
-                                <li><a href="" target="_blank">피죤 공식스토어</a></li>
-                                <li><a href="" target="_blank">남양 공식스토어</a></li>
-                                <li><a href="" target="_blank">비비안 공식스토어</a></li>
-                            </ul>
-                        </div>
+            <div class="flex justify-between">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <img src="/images/patra_f_logo.png" alt="">
                     </div>
+                    <div class="footer-link">
+                        <a href="">ABOUT US</a>
+                        <hr class="inline-block border-none w-[1px] h-3 bg-[#666]">
+                        <a href="">CONTACT US</a>
+                    </div>
+                    <div class="footer-family flex items-center">
+                        <span>Family site</span>
+                        <div>
+                            <span class="korea-logo"><img src="/images/korea.png" alt=""></span> PATRA
+                        </div>
+                        <a href="">Site map</a>                        
+                    </div>
+                </div>    
+                <div class="footer-right">
+                    <div class="flex items-center">
+                        <dl class="flex items-center">
+                            <dt>TEL : </dt>
+                            <dd>+82-2-469-2214</dd>
+                        </dl>
+                        <dl class="flex items-center">
+                            <dt>FAX : </dt>
+                            <dd>+82-2-469-2216</dd>
+                        </dl>
+                    </div>
+                    <div class="flex items-center">
+                        <dl class="flex items-center">
+                            <dt>E-MAIL : </dt>
+                            <dd> <a href="">info@patrainc.com</a> / <a href="">seoul@patrainc.com</a></dd>
+                        </dl>                        
+                    </div>
+                    <p class="address">
+                        118-22, Wanjangcheon-ro, Namsa-eup, Cheoin-gu,<br>
+                        Yongin-si, Gyeonggi-do, 17121, Republic of Korea
+                    </p>
+                    
                 </div>
-                
-                <p class="f-copyright en">COPYRIGHT ⓒ 1998-2023 COOL&COOL. ALL RIGHTS RESERVED.</p>
             </div>
+            <p>Copyright © 2025 Patra Inc. All rights reserved.</p>
         </div>
     </footer>     
       

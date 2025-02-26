@@ -1,0 +1,328 @@
+@charset "utf-8";
+
+.main-container {
+  height: calc(100vh - 200px);
+  position: relative;
+}
+.main-section {
+  overflow: hidden;
+  background-color: #fff;
+  z-index: 0;
+}
+
+.main-visual {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  overflow: hidden;
+  z-index: 10;
+  /* background-color: #fff; */
+}
+.main-visual .swiper-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+.main-visual .swiper-slide img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.visual-copy {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 0 auto;
+  text-align: left;
+  padding: 0 80px;
+  position: relative;
+  z-index: 10;
+}
+.visual-copy .main-copy {
+  font-size: 72px;
+  font-weight: 100;
+  line-height: 1.19em;
+  color: #fff;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1s 0.4s;
+}
+.visual-copy .main-copy b {
+  font-weight: 700;
+}
+.visual-copy .main-copy .ft-1 {
+  font-size: 1.2em;
+}
+.visual-copy .main-copy + p {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 100;
+  margin-top: 50px;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1s 1s;
+}
+.main-visual .swiper-slide.swiper-slide-active .main-copy {
+  transform: translateY(0);
+  opacity: 1;
+}
+.main-visual .swiper-slide.swiper-slide-active .main-copy + p {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.visual-swiper-control {
+  position: absolute;
+  left: 50%;
+  margin-left: -600px;
+  bottom: 80px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+.visual-progressbar {
+  width: 180px;
+  height: 2px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.3s opacity;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0 14px;
+}
+.visual-progressbar .bar {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+}
+.visual-progressbar.play .bar {
+  animation: barMotion 5s forwards linear;
+}
+@keyframes barMotion {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.visual-swiper-control .swiper-pagination {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.visual-swiper-control .swiper-pagination .current-page,
+.visual-swiper-control .swiper-pagination .total-page {
+  width: 24px;
+  text-align: center;
+}
+
+.visual-swiper-control .btn-swiper-prev,
+.visual-swiper-control .btn-swiper-next,
+.visual-swiper-control .btn-swiper-stop {
+  width: 20px;
+  height: 20px;
+  text-align: left;
+  text-indent: -9999px;
+  overflow: hidden;
+  margin: 0 5px;
+}
+
+.visual-swiper-control .btn-swiper-stop.on {
+  opacity: 0.3;
+}
+
+.main-section .main-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 0;
+}
+.sec-intro .main-inner {
+  max-width: 100%;
+  padding: 120px 0 0;
+}
+
+.main-title {
+  font-size: 48px;
+  line-height: 1.3em;
+  font-weight: 100;
+  letter-spacing: -0.02em;
+}
+
+.main-title-sub {
+  font-size: 18px;
+  line-height: 1.44em;
+  margin-top: 16px;
+  color: var(--color-gray3);
+}
+
+.main-section .go-more {
+  display: inline-flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 1.45em;
+  font-weight: 600;
+}
+.main-section .go-more .i-go {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #212126;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: 12px;
+}
+.main-section .go-more .i-go i {
+  font-size: 0.75em;
+}
+
+.fp-scroller {
+  transition-duration: 500ms !important;
+}
+
+.intro-title {
+  position: relative;
+  margin: 0 auto 42px auto;
+  max-width: 1200px;
+}
+.intro-title .go-more {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.main-intro-slider {
+  position: relative;
+  overflow: hidden;
+  margin: 0 -80px;
+}
+.main-intro-slider img {
+  border-radius: 20px;
+  position: absolute;
+  width: auto;
+}
+
+/* mobile ******************************************************************* */
+
+@media all and (max-width: 1360px) {
+  .main-section .main-inner {
+    margin: 0 80px;
+  }
+  .visual-swiper-control {
+    left: 80px;
+    margin-left: 0;
+  }
+}
+
+@media all and (max-width: 1099.99px) {
+  html:not(.no-js) [data-aos="fade-up"] {
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0);
+  }
+
+  .main-section [data-aos][data-aos-delay="300"].aos-animate,
+  .main-section [data-aos][data-aos-delay="400"].aos-animate,
+  .main-section [data-aos][data-aos-delay="500"].aos-animate {
+    transition-delay: 0s;
+  }
+
+  .main-section [data-aos][data-aos-delay="600"].aos-animate {
+    transition-delay: 0.1s;
+  }
+
+  .main-section [data-aos][data-aos-delay="700"].aos-animate {
+    transition-delay: 0.2s;
+  }
+
+  .main-section [data-aos][data-aos-delay="800"].aos-animate {
+    transition-delay: 0.3s;
+  }
+
+  .main-section {
+    height: auto !important;
+  }
+  .main-section .main-inner {
+    padding: 40px 0;
+    margin: 0 20px;
+  }
+
+  .fp-tableCell {
+    height: auto !important;
+  }
+
+  .fp-scrollable {
+    height: auto !important;
+    overflow: auto;
+    position: inherit;
+  }
+  /*page1*/
+  .main-visual {
+    position: relative;
+  }
+
+  .visual-copy {
+    padding: 0 20px;
+    margin: 0;
+  }
+
+  .sec-visual,
+  .sec-visual .main-visual {
+    height: 580px !important;
+  }
+
+  .visual-copy .main-copy {
+    font-size: 46px;
+    line-height: 1.3em;
+  }
+  .visual-copy .main-copy + p {
+    font-size: 28px;
+  }
+
+  .visual-swiper-control {
+    left: 20px;
+    margin-left: 0;
+    bottom: 32px;
+    right: 20px;
+  }
+
+  .visual-swiper-control .btn-swiper-prev {
+    margin: 0 0 0 auto;
+  }
+
+  .visual-swiper-control .btn-swiper-next {
+    margin: 0 0 0 10px;
+  }
+
+  .visual-swiper-control .swiper-pagination {
+    font-size: 16px;
+  }
+}
+@media all and (max-width: 640px) {
+}
+@media all and (max-width: 532px) {
+}
