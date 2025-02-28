@@ -42,6 +42,9 @@
   transition: all 0.3s;
   box-sizing: border-box;
 }
+#header.open {
+  background-color: #fff;
+}
 
 .header-inner {
   margin: 0 auto;
@@ -64,6 +67,13 @@
   text-indent: -9999px;
 }
 
+.gnav-wrap {
+  height: 100%;
+}
+
+#gnav {
+  height: 100%;
+}
 #gnav .gnav-list {
   display: flex;
   height: 100%;
@@ -71,18 +81,19 @@
 #gnav .gnav-list .nav-item .nav-link a {
   height: 100%;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   padding: 0 24px;
   display: flex;
   align-items: center;
   white-space: nowrap;
+  text-transform: uppercase;
 }
 #gnav .gnav-list .nav-item .nav-link a a:hover,
 #gnav .gnav-list .nav-item.is-open .nav-link a {
   font-weight: 700;
   color: var(--color-blue);
 }
-.is-open .megamenu-content {
+.nav-item.is-open .megamenu-content {
   visibility: visible;
   opacity: 1;
   background-color: #fff;
@@ -95,11 +106,61 @@
   top: 100px;
   z-index: 14;
   overflow: hidden;
-  transition: 0.3s ease-in-out;
+  transition: all 0.3s;
   visibility: hidden;
   opacity: 0;
-  padding: 0.5em 1000em;
+  padding: 0 1000em;
   margin: 0 -1000em;
+}
+.sub-menu-list {
+  padding: 24px 0;
+}
+.sub-menu > li > a {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.sub-menu > li > a:hover img {
+  display: inline-block;
+  transform: scale(1.1);
+}
+.sub-menu > li > a img {
+  transition: all 0.3s;
+}
+.sub-menu > li > a > span {
+  display: block;
+  width: 80%;
+  text-align: center;
+  word-break: keep-all;
+  line-height: 1.2;
+}
+.sub-menu > li > a:hover > span {
+  color: var(--color-blue);
+}
+.megamenu-content .view-all {
+  background-color: var(--color-gray9);
+  padding: 16px 1000em;
+  margin: 0 -1000em;
+}
+
+.gnav-wrap .search-wrap .search-box {
+  position: relative;
+}
+.gnav-wrap .search-wrap .search-box .hd-search-input {
+  background: #1616161a;
+  border-radius: 24px;
+  border: 0;
+}
+.gnav-wrap .search-wrap .search-box .search-btn {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  background: none;
+  border: 0;
+  padding: 0;
 }
 
 .btn-menu {
