@@ -4,7 +4,7 @@
 :root {
   --color-gray1: #161616;
   --color-gray2: #36363d;
-  --color-gray3: #57575b;
+  --color-gray3: #656565;
   --color-gray4: #62626a;
   --color-gray5: #797981;
   --color-gray6: #999;
@@ -114,10 +114,6 @@ iframe {
   margin: 0;
   padding: 0;
   border: none;
-}
-
-hr {
-  display: none;
 }
 
 table {
@@ -388,7 +384,7 @@ button {
 .justify-between {
   justify-content: space-between;
 }
-.align-center {
+.items-center {
   align-items: center;
 }
 .flex-wrap {

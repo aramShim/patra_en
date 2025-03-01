@@ -18,18 +18,16 @@ $(document).ready(function () {
 });
 
 function navHover() {
-  $(".nav-item").hover(
+  $(".nav-item.is-parent").hover(
     function () {
       $(this).addClass("is-open"); // 현재 nav-item에 is-open 추가
-      $("#header").addClass("open"); // 헤더에도 is-open 추가
     },
     function () {
       $(this).removeClass("is-open"); // 현재 nav-item에서 is-open 제거
       // 다른 nav-item이 열려 있는지 확인하고, 없으면 #header에서 is-open 제거
       if ($(".nav-item.is-open").length === 0) {
-        $("#header").removeClass("open");
       }
-    },
+    }
   );
 }
 function respond() {

@@ -32,13 +32,13 @@ function mainVisualSlider() {
   let mainVisual = new Swiper(".main-visual", {
     cssMode: true,
     navigation: {
-      nextEl: ".btn-swiper-prev",
-      prevEl: ".btn-swiper-next",
+      nextEl: ".btn-swiper-next",
+      prevEl: ".btn-swiper-prev",
     },
     pagination: {
       el: ".swiper-pagination",
     },
-    mousewheel: true,
+    //mousewheel: true,
     keyboard: true,
     effect: "fade",
     loop: true,
