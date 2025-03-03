@@ -91,24 +91,28 @@
   font-weight: 700;
   color: var(--color-blue);
 }
-.nav-item.is-open .megamenu-content {
-  visibility: visible;
-  opacity: 1;
-  background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 11px 12px;
-}
+
 .megamenu-content {
   position: absolute;
   left: 0;
   right: 0;
-  top: 100px;
+  top: 90px;
   z-index: 14;
   overflow: hidden;
-  transition: all 0.3s;
+  transition: top 0.3s ease-in-out;
   visibility: hidden;
   opacity: 0;
   padding: 0 1000em;
   margin: 0 -1000em;
+  background-color: #fff;
+}
+
+.nav-item.is-open .megamenu-content {
+  visibility: visible;
+  opacity: 1;
+  top: 100px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 11px 12px;
 }
 .sub-menu-list {
   padding: 0px 0 38px;
@@ -216,38 +220,17 @@
   z-index: 90;
   display: none;
 }
-.m-gnav h1 {
-  height: 56px;
-  width: 126px;
-  margin-left: 20px;
-}
-.m-gnav h1 a {
-  display: block;
-  height: 56px;
-  width: 126px;
-  background: url(../images/patra_logo.png) center center / 100% auto no-repeat;
-  text-align: left;
-  text-indent: -9999px;
-}
+
 .m-gnav-list {
-  padding-top: 20px;
+  padding: 20px;
 }
 .m-gnav-list a {
   display: flex;
   align-items: center;
-  height: 64px;
-  padding: 0 20px;
+  margin-right: 20px;
+  padding: 12px 0;
   font-size: 20px;
   font-weight: 600;
-}
-.btn-menu-close {
-  width: 40px;
-  height: 40px;
-  overflow: hidden;
-  position: relative;
-  position: absolute;
-  right: 10px;
-  top: 8px;
 }
 
 .m-gnav.active {
@@ -414,23 +397,6 @@
 
 /* mobile ******************************************************************* */
 
-@media all and (max-width: 1799.99px) {
-  .header-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .header-inner h1 {
-    left: 0;
-  }
-  #gnav {
-    margin-left: 232px;
-  }
-  #gnav .gnav-list {
-    width: auto;
-  }
-}
-
 @media all and (max-width: 1360px) {
   .header-inner {
     margin: 0 80px;
@@ -447,21 +413,6 @@
 }
 
 @media all and (max-width: 1240px) {
-  /* 회사소개 */
-  .intro-front .intro-txt {
-    padding: 0 20px;
-  }
-}
-
-@media all and (max-width: 1200px) {
-  /* 회사소개 */
-  .intro-front .intro-video video {
-    height: 56.25vw;
-    border-radius: 0;
-  }
-}
-
-@media all and (max-width: 1099.99px) {
   .header-inner {
     margin: 0 20px;
   }
@@ -485,13 +436,13 @@
   }
 
   .header-inner {
-    padding: 0 20px;
+    height: 100%;
   }
   .header-inner h1 {
-    height: 56px;
+    /* height: 56px; */
   }
   .header-inner h1 a {
-    width: 126px;
+    width: 80px;
   }
 
   .m-menu {
@@ -532,17 +483,19 @@
     -webkit-transform: translate3d(0, 8px, 0px);
   }
 
-  /* .toggle-menu.on .menu-line {opacity: 0;}
-	.toggle-menu.on::before {
-		-webkit-transform: rotate3d(0, 0, 1, 45deg) translate3d(0, 0, 0);
-		transform: rotate3d(0, 0, 1, 45deg) translate3d(0, 0, 0);
-		width: 23px;
-		margin-left: 0;
-	}
-	.toggle-menu.on::after {
-		-webkit-transform: rotate3d(0, 0, 1, -45deg);
-		transform: rotate3d(0, 0, 1, -45deg);
-	} */
+  .toggle-menu.on .menu-line {
+    opacity: 0;
+  }
+  .toggle-menu.on::before {
+    -webkit-transform: rotate3d(0, 0, 1, 45deg) translate3d(0, 0, 0);
+    transform: rotate3d(0, 0, 1, 45deg) translate3d(0, 0, 0);
+    width: 23px;
+    margin-left: 0;
+  }
+  .toggle-menu.on::after {
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+  }
 
   .main .m-menu .menu-line,
   .main .m-menu .toggle-menu:before,
@@ -556,11 +509,42 @@
     background-color: #252525;
   }
 
-  #gnav {
+  #gnav,
+  .gnav-wrap .search-wrap {
     display: none;
   }
   .btn-menu {
     display: block;
+  }
+  .m-gnav-list a {
+    text-transform: uppercase;
+  }
+  .m-gnav-list .has_sub > a {
+    position: relative;
+  }
+  .m-gnav-list .has_sub > a:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    margin-top: -16px;
+    background: url(../images/ico_arw_up_x32.svg) no-repeat 0 0 / 32px;
+    transform: rotate(180deg);
+  }
+  .m-gnav-list .has_sub > a.active:after {
+    transform: rotate(0);
+  }
+  .m-gnav-list .sub-menu {
+    overflow: hidden;
+    /* height: 0; */
+    /* transition: height 0.4s; */
+  }
+  .sub-menu a {
+    font-size: 16px;
+    padding: 12px 0 12px 16px;
+    color: #303030;
   }
 
   .sub-container {
@@ -715,218 +699,6 @@
   }
   .down-group a:last-child {
     margin-bottom: 0;
-  }
-
-  /* 회사소개 */
-  .intro-front {
-    padding: 60px 0 80px;
-  }
-  .intro-front .con-title {
-    margin-bottom: 12px;
-  }
-  .intro-front .intro-txt {
-    margin-bottom: 40px;
-  }
-  .intro-front .intro-video .btn-play {
-    display: none;
-  }
-  .compnay-info {
-    margin: 0;
-  }
-  .compnay-info p {
-    font-size: 16px;
-    line-height: 1.5em;
-  }
-  .compnay-info li {
-    width: 100%;
-    margin: 0 0 24px 0 !important;
-  }
-  .compnay-info li:last-child {
-    margin-bottom: 0 !important;
-  }
-  .sub-contents .sub-lnav + .sec-company {
-    padding-top: 80px;
-  }
-  .sec-company .down-group {
-    margin-top: 24px;
-  }
-  .sec-company .sec-title {
-    margin-bottom: 24px;
-  }
-
-  .logo-intro {
-    display: block;
-    margin: 0;
-  }
-  .logo-intro .logo-item {
-    width: 100%;
-    margin: 0;
-  }
-  .logo-intro .logo-item + .logo-item {
-    margin-top: 24px;
-  }
-  .logo-intro .img {
-    height: 220px;
-  }
-  .logo-intro .logo-item.logo .img img {
-    width: 200px;
-  }
-  .logo-intro .logo-item.symbol .img img {
-    width: 80px;
-  }
-  .down-group .btn-round {
-    margin: 0 0 16px 0;
-  }
-  .down-group .btn-round:last-child {
-    margin-bottom: 0;
-  }
-
-  .sec-history {
-    margin: 40px 0;
-    padding: 60px 0;
-  }
-
-  .history-item {
-    width: 280px;
-    padding-right: 32px;
-  }
-  .history-item:before {
-    width: 20px;
-    height: 20px;
-  }
-  .history-wrap .swiper-slide:before {
-    top: 9px;
-  }
-  .history-item .year {
-    font-size: 26px;
-    line-height: 1.3em;
-  }
-  .history-item .copy {
-    font-size: 18px;
-    line-height: 1.33em;
-  }
-  .history-item .event {
-    font-size: 16px;
-    line-height: 1.5em;
-  }
-  .history-swiper-control {
-    margin-top: 24px;
-    justify-content: center;
-  }
-  .history-swiper-control button {
-    width: 48px;
-    height: 48px;
-    background-size: 12px 12px !important;
-  }
-
-  .subsidiary-wrap .info {
-    padding: 24px;
-  }
-  .subsidiary-paging {
-    display: flex;
-  }
-  .subsidiary-wrap li {
-    width: 280px;
-  }
-
-  .map-viewer {
-    margin: 0 -20px;
-    border-radius: 0;
-  }
-  .btn-addr-copy {
-    display: inline-block;
-  }
-  .company-map .map-info .addr-en {
-    margin-top: 8px;
-    font-size: 13px;
-    line-height: 20px;
-  }
-  #div_map {
-    margin: 0 -20px;
-    max-width: calc(100% + 40px);
-    width: calc(100% + 40px);
-    border-radius: 0;
-  }
-
-  /* 서비스 */
-  .sub-sec-service .sec-title {
-    margin-bottom: 40px;
-  }
-
-  .go-link a {
-    width: 100%;
-  }
-
-  .sub-sec-service .service-photo {
-    margin-bottom: 20px;
-  }
-  .sertive-intro-items {
-    display: block;
-    border: none;
-    padding: 0;
-    margin-top: 20px;
-  }
-  .sertive-intro-items li {
-    width: auto;
-    margin: 0;
-    font-size: 16px;
-  }
-  .sertive-intro-items li + li {
-    border-top: 1px solid var(--color-gray9);
-  }
-  .sertive-intro-items li + li:after {
-    display: none;
-  }
-  .sertive-intro-items li:before {
-    margin-right: 20px;
-    width: 60px;
-    height: 60px;
-    background-size: auto 60px;
-  }
-  .sertive-intro-items li p {
-    width: calc(100% - 80px);
-  }
-  .sertive-intro-items .item1:before {
-    background-position: 0 0;
-  }
-  .sertive-intro-items .item2:before {
-    background-position: -76px 0;
-  }
-  .sertive-intro-items .item3:before {
-    background-position: -153px 0;
-  }
-  .sub-sec-service .service-photo {
-    margin: 0 -20px;
-    width: calc(100% + 40px);
-  }
-  .sub-sec-service .service-photo img {
-    border-radius: 0;
-  }
-  .service-photo-slider {
-    border-radius: 0;
-  }
-
-  /* 홍보 */
-  .sub-sec-pr .sec-title {
-    margin-bottom: 40px;
-  }
-  .pr-list ul {
-    display: block;
-    margin: 0;
-  }
-  .pr-list li {
-    width: auto;
-    margin: 0 0 40px 0;
-  }
-  .pr-list li:last-child {
-    margin: 0;
-  }
-  .pr-list .title {
-    margin-bottom: 12px;
-  }
-  .pr-list .date {
-    font-size: 13px;
-    line-height: 1.53em;
   }
 
   .paging {
@@ -1108,30 +880,25 @@
     font-size: 14px;
     line-height: 1.71em;
   }
+  #footer {
+    font-size: 12px;
+  }
+  .footer-link a {
+    font-size: 14px;
+  }
 }
 
 @media all and (max-width: 768px) {
-  .f-info {
+}
+@media all and (max-width: 640px) {
+  .footer-inner > .flex {
     flex-flow: column;
-    align-items: flex-start;
+    gap: 20px 0;
   }
-  .f-info li + li {
-    margin-left: 0;
-    padding: 0;
+  .footer-right .flex {
+    justify-content: start;
   }
-  .f-info li + li:before {
-    display: none;
-  }
-
-  .f-contact {
-    flex-flow: column;
-    align-items: flex-start;
-  }
-  .f-contact li + li {
-    margin-left: 0;
-    padding: 0;
-  }
-  .f-contact li + li:before {
-    display: none;
+  .footer-right {
+    text-align: left;
   }
 }

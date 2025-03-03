@@ -244,19 +244,54 @@
           </div>
         </div>
         <!--모바일 nav-->
-        <div class="m-gnav">
-          <h1><a href="">파트라</a></h1>
-          <nav class="m-gnav">
+        <div class="m-gnav-wrap">
+          <nav id="m-gnav" class="m-gnav">
             <ul class="m-gnav-list">
-              <li><a href="">product</a></li>
-              <li><a href="">library</a></li>
-              <li><a href="">about us</a></li>
+              <li class="menu_item has_sub">
+                <a href="javascript:void(0);" class="">
+                  <span>product</span>
+                </a>
+                <div class="sub-menu">
+                  <ul>
+                    <li><a href="">office chair</a></li>
+                    <li><a href="">muiltipurpose chair</a></li>
+                    <li><a href="">waiting chair</a></li>
+                    <li><a href="">stool</a></li>
+                    <li><a href="">tables</a></li>
+                    <li><a href="">accesories</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu_item has_sub">
+                <a href="javascript:void(0);" class="">
+                  <span>library</span>
+                </a>
+                <div class="sub-menu">
+                  <ul>
+                    <li><a href="">catalogue</a></li>
+                    <li><a href="">projects</a></li>
+                    <li><a href="">awards and certifications</a></li>
+                    <li><a href="">videos</a></li>
+                    <li><a href="">2D&3D files download</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu_item has_sub">
+                <a href="javascript:void(0);" class="">
+                  <span>about us</span>
+                </a>
+                <div class="sub-menu">
+                  <ul>
+                    <li><a href="">our history</a></li>
+                    <li><a href="">organization</a></li>
+                    <li><a href="">R&D</a></li>
+                    <li><a href="">global network</a></li>
+                  </ul>
+                </div>
+              </li>
               <li><a href="">contact</a></li>
             </ul>
           </nav>
-          <button class="btn-menu-close" type="button" title="메뉴닫기">
-            <i class="icon-sign03"></i>
-          </button>
         </div>
       </header>
       <div id="container" class="container">
@@ -360,7 +395,7 @@
         </div>
       </div>
       <footer id="footer" class="footer">
-        <div class="footer-inner">
+        <div class="footer-inner" data-aos="fade-down">
           <div class="flex justify-between">
             <div class="footer-left">
               <div class="footer-logo">

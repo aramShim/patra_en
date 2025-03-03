@@ -7,20 +7,33 @@ $(document).ready(function () {
     scrolled();
   });
 
-  topMenu();
-  topMenu_m();
   scrolled();
   goTopMove();
 
   navHover();
+  menuClickFunctionStop();
+  moMenuAccordion();
 
   Modal();
 });
+function menuClickFunctionStop() {
+  $("#js-toggle").click(function () {
+    $("#m-gnav").toggleClass("active");
+    $(this).toggleClass("on");
+  });
+}
+function moMenuAccordion() {
+  $(".menu_item.has_sub > a").click(function () {
+    $(this).toggleClass("active");
+    $(this).next(".sub-menu").slideToggle();
+  });
+}
 
 function navHover() {
   $(".nav-item.is-parent").hover(
     function () {
       $(this).addClass("is-open"); // 현재 nav-item에 is-open 추가
+      $(this).find(".megamenu-content").addClass("megamenu-visible");
     },
     function () {
       $(this).removeClass("is-open"); // 현재 nav-item에서 is-open 제거
@@ -114,53 +127,4 @@ function Modal() {
     $("body").removeClass("open");
     $(this).parents(".modal").removeClass("open");
   });
-}
-
-// 사용X
-function topMenu() {
-  const $ganvLi = $(".gnav-list > li");
-  const activeNum = $(".gnav-list > li.active").index();
-
-  $("#gnav").on("mouseleave", function () {
-    if (activeNum >= 0) {
-      $ganvLi.eq(activeNum).addClass("active");
-    }
-  });
-  $ganvLi.children("a").on("mouseenter", function () {
-    $ganvLi.removeClass("active");
-    $(this).parent().addClass("active");
-  });
-  $ganvLi.on("mouseleave", function () {
-    $ganvLi.removeClass("active");
-  });
-}
-
-function topMenu_m() {
-  const $btnMenu = $(".m-menu");
-  const $btnClose = $(".m-gnav .btn-menu-close");
-  const $mMenu = $(".m-gnav");
-  const $html = $("html");
-
-  $btnMenu.on("click", function () {
-    menuOpen();
-  });
-  $btnClose.on("click", function () {
-    menuClose();
-  });
-
-  function menuOpen() {
-    $html.css({
-      overflow: "hidden",
-      "touch-action": "none",
-    });
-    $mMenu.addClass("active");
-  }
-
-  function menuClose() {
-    $html.css({
-      overflow: "auto",
-      "touch-action": "auto",
-    });
-    $mMenu.removeClass("active");
-  }
 }
