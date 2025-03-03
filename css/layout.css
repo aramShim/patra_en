@@ -87,7 +87,8 @@
   text-transform: uppercase;
 }
 #gnav .gnav-list .nav-item .nav-link a:hover,
-#gnav .gnav-list .nav-item.is-open .nav-link a {
+#gnav .gnav-list .nav-item.is-open .nav-link a,
+#gnav .gnav-list .nav-item.active .nav-link a {
   font-weight: 700;
   color: var(--color-blue);
 }
@@ -239,7 +240,7 @@
 
 /* sub */
 .sub-container {
-  padding-top: 80px;
+  padding-top: 100px;
 }
 
 /* footer */
@@ -324,6 +325,50 @@
 .go-top.on{display:block;} */
 
 /* sub ******************************************************************* */
+.sub-banner {
+  width: 100%;
+  position: relative;
+  z-index: 9;
+  text-align: center;
+  min-height: 280px;
+  color: #fff;
+}
+.sub-banner:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #0b111c66;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.sub-title-wrap {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+}
+.sub-title-wrap h2 {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+}
+.sub-title-info {
+  padding-top: 10px;
+  font-size: 24px;
+}
+.sub-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.sub-cont {
+  padding: 50px 0;
+}
+.sub-cont h3.sub-cont-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
 
 /*paging*/
 .paging {
