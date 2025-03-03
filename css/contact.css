@@ -4,9 +4,6 @@
   background: url(../images/sub-title-banner3.png) center center / cover
     no-repeat;
 }
-.sub-title-wrap {
-  height: 280px;
-}
 .sub-title-info.flex {
   gap: 0 16px;
 }

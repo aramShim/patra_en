@@ -346,7 +346,7 @@
 .sub-title-wrap {
   position: relative;
   z-index: 10;
-  height: 100%;
+  height: 280px;
 }
 .sub-title-wrap h2 {
   text-transform: uppercase;
@@ -367,6 +367,45 @@
 .sub-cont h3.sub-cont-title {
   text-align: center;
   font-size: 24px;
+  font-weight: 700;
+}
+.sub-link {
+  margin: 0 auto;
+  position: relative;
+  z-index: 9;
+  background: #0b111c99;
+}
+.sub-link .flex > li {
+  flex: 1;
+  position: relative;
+}
+.sub-link .flex > li:after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 60%;
+  background-color: #ffffff66;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.sub-link .flex > li:last-child:after {
+  width: 0;
+}
+.sub-link a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all 0.1s;
+}
+.sub-link a:hover,
+.sub-link a.active {
   font-weight: 700;
 }
 

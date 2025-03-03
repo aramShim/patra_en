@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+.sub-banner {
+  background: url(../images/sub-title-banner1.png) center center / cover
+    no-repeat;
+}
+
+.catalogue-wrap {
+  text-align: center;
+  padding: 24px 0;
+}
+.catalogue-btn {
+  margin-top: 36px;
+  gap: 0 24px;
+}
+.btn-outline {
+  border-radius: 26px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  padding: 14px 20px 14px 26px;
+  gap: 0 16px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.btn-outline:hover {
+  background: #f1f1f1;
+}
+.btn-outline svg {
+  color: #999;
+}
