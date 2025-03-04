@@ -148,6 +148,9 @@ fieldset legend {
   height: 0;
   overflow: hidden;
 }
+* {
+  box-sizing: border-box;
+}
 
 input {
   vertical-align: middle;
