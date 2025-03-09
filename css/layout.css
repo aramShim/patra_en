@@ -408,6 +408,20 @@
 .sub-link a.active {
   font-weight: 700;
 }
+.breacrumb ol.flex {
+  color: #999999;
+  align-items: center;
+  justify-content: end;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+  /* font-size: 14px; */
+}
+.breacrumb ol.flex svg {
+  margin: 0 6px;
+}
+.breadcrumb .current-category a {
+  color: #161616;
+}
 
 /*paging*/
 .paging {
