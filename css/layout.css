@@ -30,6 +30,27 @@
   min-width: 280px;
   background-color: #fff;
 }
+.grid {
+  display: grid;
+  grid-auto-flow: row dense;
+  gap: 16px;
+}
+
+.grid-col-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-col-4 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-col-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.col-span2 {
+  grid-column: span 2;
+}
 
 /* header */
 #header {

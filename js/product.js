@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  //아코디언
   $(".section-header").click(function () {
     const parent = $(this).closest(".accordion-group");
     const content = parent.find(".section-content .detail-wrap");
@@ -16,6 +17,7 @@ $(document).ready(function () {
     minusIcon.toggleClass("hidden", parent.hasClass("active"));
   });
 
+  //fancybox
   Fancybox.bind("[data-fancybox]", {
     // Your options go here
   });

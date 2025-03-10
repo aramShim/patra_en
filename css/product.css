@@ -74,17 +74,7 @@
   align-items: center;
   justify-content: center;
 }
-.product-list-img .grid {
-  display: grid;
-  grid-auto-flow: row dense;
-  gap: 16px;
-}
-.grid-col-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-.col-span2 {
-  grid-column: span 2;
-}
+
 .product-list-img .grid img {
   width: 100%;
   height: 100%;
@@ -238,12 +228,7 @@
   grid-auto-flow: row dense;
   gap: 16px;
 }
-.grid-col-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-.grid-col-5 {
-  grid-template-columns: repeat(5, 1fr);
-}
+
 .detail-img.border {
   border: 1px solid #d9d9d9;
 }

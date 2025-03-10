@@ -15,6 +15,23 @@ $(document).ready(function () {
   moMenuAccordion();
 
   Modal();
+
+  //탭
+  $(".tab-btn").click(function () {
+    const targetTab = $(this).data("hs-tab"); // 클릭한 버튼의 data-hs-tab 값 (ex: #tab-item-1)
+
+    // 모든 탭 버튼의 active 제거 & 클릭한 버튼만 active 추가
+    $(".tab-btn").removeClass("active");
+    $(this).addClass("active");
+
+    // 모든 탭 콘텐츠 숨기기 & 선택한 탭 콘텐츠만 표시
+    $("[role='tabpanel']").hide();
+    $(targetTab).show();
+  });
+
+  // 초기 로드 시 첫 번째 탭만 표시
+  $("[role='tabpanel']").hide();
+  $(".tab-btn.active").trigger("click");
 });
 function menuClickFunctionStop() {
   $("#js-toggle").click(function () {
@@ -40,7 +57,7 @@ function navHover() {
       // 다른 nav-item이 열려 있는지 확인하고, 없으면 #header에서 is-open 제거
       if ($(".nav-item.is-open").length === 0) {
       }
-    }
+    },
   );
 }
 function respond() {
