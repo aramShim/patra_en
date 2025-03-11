@@ -317,6 +317,11 @@
       <div id="container" class="container">
         <!--섹션영역-->
         <div class="sub-container">
+          <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+          />
           <link rel="stylesheet" href="/css/library.css" />
           <div class="sub-banner">
             <div
@@ -349,96 +354,308 @@
           </div>
           <div class="sub-cont">
             <div class="sub-inner">
-              <div class="grid grid-col-3">
-                <!--2칸이면 col-span2의 클래스를 갖는다.-->
-                <div class="product-img col-span2">
-                  <a href="product-list2.html">
-                    <img src="/images/product/product-1.jpg" alt="" />
-                    <span>Volf</span>
+              <!--대표썸네일-->
+              <div class="grid grid-col-3 main-images">
+                <!--2칸이면 col-span2의 클래스를 갖는다. 처음 열개-->
+                <div class="project-img col-span2">
+                  <a
+                    data-fancybox="project-img1"
+                    href="/images/library/project-img1.jpg"
+                  >
+                    <img src="/images/library/project-img1.jpg" alt="" />
+                    <span>
+                      <b>Volf</b>
+                      <i class="bi bi-search"></i>
+                    </span>
                   </a>
                 </div>
-                <div class="product-img">
-                  <a href="">
-                    <img src="/images/product/product-2.jpg" alt="" />
-                    <span>KYLE</span>
+                <div class="project-img">
+                  <a
+                    data-fancybox="project-img2"
+                    href="/images/library/project-img2.jpg"
+                  >
+                    <img src="/images/library/project-img2.jpg" alt="" />
+                    <span>
+                      <b>KYLE</b>
+                      <i class="bi bi-search"></i>
+                    </span>
                   </a>
                 </div>
-                <div class="product-img">
-                  <a href="">
-                    <img src="/images/product/product-3.jpg" alt="" />
-                    <span>LAVO</span>
+                <div class="project-img">
+                  <a
+                    data-fancybox="project-img3"
+                    href="/images/library/project-img3.jpg"
+                  >
+                    <img src="/images/library/project-img3.jpg" alt="" />
+                    <span>
+                      <b>LAVO</b>
+                      <i class="bi bi-search"></i>
+                    </span>
                   </a>
                 </div>
-                <div class="product-img">
-                  <a href="">
-                    <img src="/images/product/product-4.jpg" alt="" />
-                    <span>LAVO-M</span>
+                <div class="project-img">
+                  <a
+                    data-fancybox="project-img4"
+                    href="/images/library/project-img4.jpg"
+                  >
+                    <img src="/images/library/project-img4.jpg" alt="" />
+                    <span>
+                      <b>LAVO-M</b>
+                      <i class="bi bi-search"></i>
+                    </span>
                   </a>
                 </div>
-                <div class="product-img">
-                  <a href="">
-                    <img src="/images/product/product-5.jpg" alt="" />
-                    <span>PIXI</span>
+                <div class="project-img">
+                  <a
+                    data-fancybox="project-img5"
+                    href="/images/library/project-img5.jpg"
+                  >
+                    <img src="/images/library/project-img5.jpg" alt="" />
+                    <span>
+                      <b>PIXI</b>
+                      <i class="bi bi-search"></i>
+                    </span>
                   </a>
                 </div>
-                <div class="product-img">
-                  <a href="">
-                    <img src="/images/product/product-6.jpg" alt="" />
-                    <span>KINDL</span>
+                <div class="project-img">
+                  <a
+                    data-fancybox="project-img6"
+                    href="/images/library/project-img6.jpg"
+                  >
+                    <img src="/images/library/project-img6.jpg" alt="" />
+                    <span>
+                      <b>KINDL</b>
+                      <i class="bi bi-search"></i>
+                    </span>
                   </a>
                 </div>
-                <div class="product-img col-span2">
-                  <a href="">
-                    <img src="/images/product/product-7.jpg" alt="" />
-                    <span>LIBRA</span>
+                <div class="project-img col-span2">
+                  <a
+                    data-fancybox="project-img7"
+                    href="/images/library/project-img7.jpg"
+                  >
+                    <img src="/images/library/project-img7.jpg" alt="" />
+                    <span>
+                      <b>LIBRA</b>
+                      <i class="bi bi-search"></i>
+                    </span>
                   </a>
                 </div>
-                <div class="product-img">
-                  <a href="">
-                    <img src="/images/product/product-8.jpg" alt="" />
-                    <span>FLO</span>
+                <div class="project-img">
+                  <a
+                    data-fancybox="project-img8"
+                    href="/images/library/project-img8.jpg"
+                  >
+                    <img src="/images/library/project-img8.jpg" alt="" />
+                    <span>
+                      <b>FLO</b>
+                      <i class="bi bi-search"></i>
+                    </span>
                   </a>
                 </div>
-                <div class="product-img">
-                  <a href="">
-                    <img src="/images/product/product-9.jpg" alt="" />
-                    <span>FLEX</span>
+                <div class="project-img">
+                  <a
+                    data-fancybox="project-img9"
+                    href="/images/library/project-img9.jpg"
+                  >
+                    <img src="/images/library/project-img9.jpg" alt="" />
+                    <span>
+                      <b>FLEX</b>
+                      <i class="bi bi-search"></i>
+                    </span>
                   </a>
                 </div>
-                <div class="product-img">
-                  <a href="">
-                    <img src="/images/product/product-10.jpg" alt="" />
-                    <span>FORTIS</span>
+                <div class="project-img">
+                  <a
+                    data-fancybox="project-img10"
+                    href="/images/library/project-img10.jpg"
+                  >
+                    <img src="/images/library/project-img10.jpg" alt="" />
+                    <span>
+                      <b>FORTIS</b>
+                      <i class="bi bi-search"></i>
+                    </span>
                   </a>
                 </div>
-                <div class="product-img col-span2">
-                  <a href="">
-                    <img src="/images/product/product-11.jpg" alt="" />
-                    <span>MONO</span>
+                <!--뒤에 hidden 클래스 추가-->
+                <div class="project-img col-span2 hidden">
+                  <a
+                    data-fancybox="project-img1"
+                    href="/images/library/project-img1.jpg"
+                  >
+                    <img src="/images/library/project-img1.jpg" alt="" />
+                    <span>
+                      <b>Volf</b>
+                      <i class="bi bi-search"></i>
+                    </span>
                   </a>
                 </div>
-                <div class="product-img">
-                  <a href="">
-                    <img src="/images/product/product-12.jpg" alt="" />
-                    <span>MONO MESH</span>
+                <div class="project-img hidden">
+                  <a
+                    data-fancybox="project-img2"
+                    href="/images/library/project-img2.jpg"
+                  >
+                    <img src="/images/library/project-img2.jpg" alt="" />
+                    <span>
+                      <b>KYLE</b>
+                      <i class="bi bi-search"></i>
+                    </span>
                   </a>
                 </div>
-                <div class="product-img">
-                  <a href="">
-                    <img src="/images/product/product-13.jpg" alt="" />
-                    <span>SKIN</span>
+                <div class="project-img hidden">
+                  <a
+                    data-fancybox="project-img3"
+                    href="/images/library/project-img3.jpg"
+                  >
+                    <img src="/images/library/project-img3.jpg" alt="" />
+                    <span>
+                      <b>LAVO</b>
+                      <i class="bi bi-search"></i>
+                    </span>
                   </a>
                 </div>
-                <div class="product-img">
-                  <a href="">
-                    <img src="/images/product/product-14.jpg" alt="" />
-                    <span>MARIN</span>
+                <div class="project-img hidden">
+                  <a
+                    data-fancybox="project-img4"
+                    href="/images/library/project-img4.jpg"
+                  >
+                    <img src="/images/library/project-img4.jpg" alt="" />
+                    <span>
+                      <b>LAVO-M</b>
+                      <i class="bi bi-search"></i>
+                    </span>
                   </a>
                 </div>
+                <div class="project-img hidden">
+                  <a
+                    data-fancybox="project-img5"
+                    href="/images/library/project-img5.jpg"
+                  >
+                    <img src="/images/library/project-img5.jpg" alt="" />
+                    <span>
+                      <b>PIXI</b>
+                      <i class="bi bi-search"></i>
+                    </span>
+                  </a>
+                </div>
+                <div class="project-img hidden">
+                  <a
+                    data-fancybox="project-img6"
+                    href="/images/library/project-img6.jpg"
+                  >
+                    <img src="/images/library/project-img6.jpg" alt="" />
+                    <span>
+                      <b>KINDL</b>
+                      <i class="bi bi-search"></i>
+                    </span>
+                  </a>
+                </div>
+                <div class="project-img col-span2 hidden">
+                  <a
+                    data-fancybox="project-img7"
+                    href="/images/library/project-img7.jpg"
+                  >
+                    <img src="/images/library/project-img7.jpg" alt="" />
+                    <span>
+                      <b>LIBRA</b>
+                      <i class="bi bi-search"></i>
+                    </span>
+                  </a>
+                </div>
+                <div class="project-img hidden">
+                  <a
+                    data-fancybox="project-img8"
+                    href="/images/library/project-img8.jpg"
+                  >
+                    <img src="/images/library/project-img8.jpg" alt="" />
+                    <span>
+                      <b>FLO</b>
+                      <i class="bi bi-search"></i>
+                    </span>
+                  </a>
+                </div>
+                <div class="project-img hidden">
+                  <a
+                    data-fancybox="project-img9"
+                    href="/images/library/project-img9.jpg"
+                  >
+                    <img src="/images/library/project-img9.jpg" alt="" />
+                    <span>
+                      <b>FLEX</b>
+                      <i class="bi bi-search"></i>
+                    </span>
+                  </a>
+                </div>
+                <div class="project-img hidden">
+                  <a
+                    data-fancybox="project-img10"
+                    href="/images/library/project-img10.jpg"
+                  >
+                    <img src="/images/library/project-img10.jpg" alt="" />
+                    <span>
+                      <b>FORTIS</b>
+                      <i class="bi bi-search"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="more-btn flex items-center justify-center project-img-more-btn"
+              >
+                view more
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-chevron-down"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <!--서브이미지-->
+              <div class="project-sub-img hidden">
+                <a
+                  data-fancybox="project-img1"
+                  href="/images/library/project-img1-1.jpg"
+                >
+                  <img src="/images/library/project-img1-1.jpg" alt="" />
+                </a>
+                <a
+                  data-fancybox="project-img1"
+                  href="/images/library/project-img1-2.jpg"
+                >
+                  <img src="/images/library/project-img1-2.jpg" alt="" />
+                </a>
+                <a
+                  data-fancybox="project-img1"
+                  href="/images/library/project-img1-3.jpg"
+                >
+                  <img src="/images/library/project-img1-3.jpg" alt="" />
+                </a>
+                <a
+                  data-fancybox="project-img1"
+                  href="/images/library/project-img1-4.jpg"
+                >
+                  <img src="/images/library/project-img1-4.jpg" alt="" />
+                </a>
+                <a
+                  data-fancybox="project-img1"
+                  href="/images/library/project-img1-5.jpg"
+                >
+                  <img src="/images/library/project-img1-5.jpg" alt="" />
+                </a>
               </div>
             </div>
           </div>
         </div>
+        <script src="/js/library.js"></script>
       </div>
       <footer id="footer" class="footer">
         <div class="footer-inner">
