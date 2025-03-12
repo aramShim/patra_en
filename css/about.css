@@ -98,3 +98,80 @@
 .history-year-wrap .year-info dd {
   padding: 16px 0 20px;
 }
+/*organization*/
+.organization-wrap {
+  padding: 32px 0;
+}
+.organization-wrap .organization-top {
+  background-color: #577abd1a;
+  border: 1px solid #577abd;
+  border-radius: 50px;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 16px;
+  text-align: center;
+  color: #577abd;
+}
+.organization-sub {
+  align-items: start;
+}
+.sub-section {
+  position: relative;
+  padding-top: 24px;
+  text-align: center;
+}
+.sub-section:before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #d9d9d9;
+  z-index: 0;
+}
+.sub-top {
+  border: 1px solid #999;
+  background-color: #f7f7f7;
+  padding: 16px 32px 16px 84px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  position: relative;
+  background-image: url(/images/about/korea.png);
+  background-position: left 16px center;
+  background-repeat: no-repeat;
+  text-align: left;
+}
+.sub3 .sub-top {
+  background-image: url(/images/about/china.png);
+}
+.sub-top span {
+  display: block;
+  font-weight: 500;
+  color: #383838;
+  font-size: 20px;
+}
+.sub-top b {
+  font-weight: 700;
+  color: #656565;
+  font-size: 16px;
+}
+.sub-co-list {
+  position: relative;
+  display: inline-flex;
+  flex-flow: column;
+}
+.sub-co-list > li {
+  background-color: #fff;
+  border: 1px solid #999999;
+  padding: 16px 32px;
+  border-radius: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 24px;
+}
+.sub-co-list > li:last-child {
+  margin-bottom: 0;
+}

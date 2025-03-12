@@ -48,6 +48,9 @@
 .grid-col-5 {
   grid-template-columns: repeat(5, 1fr);
 }
+.grid-col-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
 .col-span2 {
   grid-column: span 2;
 }
