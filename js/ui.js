@@ -62,6 +62,8 @@ function menuClickFunctionStop() {
   $("#js-toggle").click(function () {
     $("#m-gnav").toggleClass("active");
     $(this).toggleClass("on");
+    $("html").toggleClass("overflow-hidden");
+    //lenis.stop();
   });
 }
 function moMenuAccordion() {
