@@ -72,24 +72,49 @@
           <li><a href="#footer">푸터 바로가기</a></li>
         </ul>
       </div>
+      <!-- HTML 부분 -->
       <header id="header" class="header">
         <div class="header-inner">
-          <h1><a href="">파트라</a></h1>
+          <h1><a href="/index.html">파트라</a></h1>
           <div class="m-menu">
             <div id="js-toggle" class="toggle-menu">
               <div class="menu-line"></div>
             </div>
           </div>
           <div class="gnav-wrap flex align-center">
+            <div class="search-wrap">
+              <div class="search-box">
+                <form action="">
+                  <label for="searchItem" class="hidden">검색어입력</label>
+                  <input id="searchItem" class="hd-search-input" type="text" />
+                  <button type="submit" class="search-btn" title="검색">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="m21 21-4.3-4.3" />
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
             <nav id="gnav">
               <ul class="gnav-list">
                 <li class="nav-item is-parent">
                   <span class="nav-link">
-                    <a href="" class="en">product</a>
+                    <a href="javascript:void(0);" class="en"><b>product</b></a>
                   </span>
                   <div class="megamenu-content">
                     <div class="sub-menu-list">
-                      <ul class="sub-menu flex justify-center">
+                      <ul class="sub-menu flex justify-center product-sub">
                         <li>
                           <a href="/view/product/product-list.html">
                             <img src="/images/nav-sub/product1.png" alt="" />
@@ -138,7 +163,7 @@
                 </li>
                 <li class="nav-item is-parent active">
                   <span class="nav-link">
-                    <a href="" class="en">library</a>
+                    <a href="javascript:void(0);" class="en"><b>library</b></a>
                   </span>
                   <div class="megamenu-content">
                     <div class="sub-menu-list">
@@ -179,7 +204,7 @@
                 </li>
                 <li class="nav-item is-parent">
                   <span class="nav-link">
-                    <a href="" class="en">about us</a>
+                    <a href="javascript:void(0);" class="en"><b>about us</b></a>
                   </span>
                   <div class="megamenu-content">
                     <div class="sub-menu-list">
@@ -219,101 +244,7 @@
                 </li>
               </ul>
             </nav>
-            <div class="search-wrap">
-              <div class="search-box">
-                <form action="">
-                  <label for="searchItem" class="hidden">검색어입력</label>
-                  <input id="searchItem" class="hd-search-input" type="text" />
-                  <button type="submit" class="search-btn" title="검색">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <circle cx="11" cy="11" r="8" />
-                      <path d="m21 21-4.3-4.3" />
-                    </svg>
-                  </button>
-                </form>
-              </div>
-            </div>
           </div>
-        </div>
-        <!--모바일 nav-->
-        <div class="m-gnav-wrap">
-          <nav id="m-gnav" class="m-gnav">
-            <ul class="m-gnav-list">
-              <li class="menu_item has_sub">
-                <a href="javascript:void(0);" class="">
-                  <span>product</span>
-                </a>
-                <div class="sub-menu">
-                  <ul>
-                    <li>
-                      <a href="/view/product/product-list.html">office chair</a>
-                    </li>
-                    <li><a href="">muiltipurpose chair</a></li>
-                    <li><a href="">waiting chair</a></li>
-                    <li><a href="">stool</a></li>
-                    <li><a href="">tables</a></li>
-                    <li><a href="">accesories</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="menu_item has_sub">
-                <a href="javascript:void(0);" class="">
-                  <span>library</span>
-                </a>
-                <div class="sub-menu">
-                  <ul>
-                    <li>
-                      <a href="/view/library/catalogue.html">catalogue</a>
-                    </li>
-                    <li>
-                      <a href="/view/library/projects.html">projects</a>
-                    </li>
-                    <li>
-                      <a href="/view/library/award.html">
-                        awards and certifications
-                      </a>
-                    </li>
-                    <li><a href="/view/library/videos.html">videos</a></li>
-                    <li>
-                      <a href="/view/library/download.html">
-                        2D&3D files download
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="menu_item has_sub">
-                <a href="javascript:void(0);" class="">
-                  <span>about us</span>
-                </a>
-                <div class="sub-menu">
-                  <ul>
-                    <li>
-                      <a href="/view/about/history.html">our history</a>
-                    </li>
-                    <li>
-                      <a href="/view/about/organization.html">organization</a>
-                    </li>
-                    <li><a href="/view/about/randd.html">R&D</a></li>
-                    <li>
-                      <a href="/view/about/network.html">global network</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li><a href="/view/contact.html">contact</a></li>
-            </ul>
-          </nav>
         </div>
       </header>
       <div id="container" class="container">
@@ -427,16 +358,15 @@
                 <hr
                   class="vertical-bar inline-block border-none w-[1px] h-3 bg-[#666]"
                 />
-                <a href="">CONTACT US</a>
+                <a href="/view/contact.html">CONTACT US</a>
               </div>
               <div class="footer-family flex items-center">
                 <span>Family site</span>
                 <div class="flex items-center korea-logo">
                   <img src="/images/korea.png" alt="" />
-
-                  PATRA
+                  <a href="https://patrakorea.com/" target="_blank">PATRA</a>
                 </div>
-                <a href="">Site map</a>
+                <a href="/view/sitemap.html">Site map</a>
               </div>
             </div>
             <div class="footer-right">
