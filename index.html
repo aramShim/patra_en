@@ -385,7 +385,17 @@
               <div class="main-visual">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img src="/images/main-slide1.jpg" alt="" />
+                    <picture>
+                      <source
+                        media="(max-width: 768px)"
+                        srcset="/images/main_slide1_mo.jpg"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="/images/main-slide1.jpg"
+                      />
+                      <img src="/images/main-slide1.jpg" alt="웃는 고양이" />
+                    </picture>
                     <div class="visual-copy">
                       <p class="main-copy">
                         Patra makes <br />

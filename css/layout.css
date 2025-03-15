@@ -254,7 +254,8 @@
 
 .m-gnav-list {
   padding: 20px;
-  height: calc(100% - 120px);
+  /* height: calc(100% - 120px); */
+  height: calc(95% - 120px);
   overflow-y: auto;
 }
 .m-gnav-list a {
