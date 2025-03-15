@@ -243,44 +243,7 @@
   overflow: hidden !important;
   touch-action: none;
 }
-.m-gnav {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff;
-  z-index: 90;
-  display: none;
-  overflow: auto;
-}
 
-.m-gnav-list {
-  padding: 20px;
-  height: calc(95% - 120px);
-  overflow-y: auto;
-}
-.m-gnav-list a {
-  display: flex;
-  align-items: center;
-  padding: 12px 0;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.m-gnav.active {
-  display: block;
-}
-.m-gnav-wrap .search-box {
-  margin: 0 20px;
-}
-.m-gnav-wrap .search-box .hd-search-input {
-  width: 100%;
-}
-.m-gnav .menu_item {
-  border-bottom: 1px solid #d9d9d9;
-}
-.m-gnav .sub-menu {
-  display: none;
-}
 .sub-menu .product-sub {
   display: flex;
   gap: 10px 0;
@@ -297,11 +260,7 @@
   gap: 10px 0;
   padding: 0;
 }
-.m-view-more a {
-  border: 1px solid #d9d9d9;
-  margin: 16px 0;
-  gap: 0 16px;
-}
+
 .sub-menu a img {
   max-width: 100%;
 }
@@ -355,31 +314,6 @@
   transform: rotate3d(0, 0, 1, -45deg);
 }
 
-.m-gnav-list a {
-  text-transform: uppercase;
-}
-.m-gnav-list .has_sub > a {
-  position: relative;
-}
-.m-gnav-list .has_sub > a:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 32px;
-  height: 32px;
-  margin-top: -16px;
-  background: url(../images/ico_arw_up_x32.svg) no-repeat 0 0 / 32px;
-  transform: rotate(180deg);
-}
-.m-gnav-list .has_sub > a.active:after {
-  transform: rotate(0);
-}
-.m-gnav-list .sub-menu {
-  overflow: hidden;
-  /* height: 0; */
-  /* transition: height 0.4s; */
-}
 .sub-menu a {
   font-size: 16px;
   padding: 12px 0 12px 16px;
@@ -898,51 +832,8 @@
     background-size: 18px auto;
   }
 
-  .con-title {
-    font-size: 26px;
-    line-height: 1.3em;
-  }
-  .md-title {
-    font-size: 18px;
-    line-height: 1.3em;
-  }
-  .big-title {
-    font-size: 18px;
-    line-height: 1.3em;
-  }
-  .sub-txt {
-    font-size: 16px;
-    line-height: 1.5em;
-  }
-
-  .sub-section {
-    padding: 40px 0;
-  }
-  .sub-section .sec-title {
-    margin-bottom: 40px;
-  }
-  .sub-contents .sub-section:first-of-type {
-    padding-top: 60px;
-  }
-  .sub-contents .sub-section:first-child {
-    padding-top: 40px;
-  }
-  .sub-contents .sub-section:last-of-type {
-    padding-bottom: 60px;
-  }
-
-  .sub-contents .sub-lnav + .sub-section {
-    padding-top: 40px;
-  }
-  .sub-lnav li {
-    margin-right: 6px;
-  }
-
   .btn-round {
     width: 100%;
-  }
-  html[lang="ja"] .btn-round {
-    padding: 0 12px 0 16px;
   }
 
   .down-group {

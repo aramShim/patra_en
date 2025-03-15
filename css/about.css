@@ -285,134 +285,61 @@
   text-align: center;
   position: relative;
 }
-.location {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transform: translate(-50%, -50%);
+.network-wrap .global-map-wrap img {
+  max-width: 100%;
 }
-
-.location-korea {
-  top: 28%;
-  right: 6%;
+line.location-line {
+  stroke: #4a76c4;
+  stroke-width: 2;
 }
-
-.location-china {
-  top: 45%;
-  right: 8%;
-}
-
-.location-label {
-  background-color: #577abd;
-  color: white;
-  padding: 12px 32px;
-  border-radius: 30px;
-  font-weight: bold;
-  white-space: nowrap;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 15px;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.location-label:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-.location-china .location-label {
-  margin-bottom: 0;
-  margin-top: 15px;
-}
-
+/* 기본 원 스타일 */
 .location-dot {
-  position: relative;
-  width: 12px;
-  height: 12px;
-  background-color: #4a76c4;
-  border-radius: 50%;
+  fill: #577abd; /* 원하는 색상으로 변경 가능 */
 }
 
-.location-dot::after {
-  content: "";
-  position: absolute;
-  top: -4px;
-  left: -4px;
-  width: 20px;
-  height: 20px;
-  background-color: rgba(74, 118, 196, 0.3);
-  border-radius: 50%;
-  animation: pulse 2s infinite;
+/* 중앙 원(가장 작은 원) 애니메이션 */
+circle.location-dot:nth-child(1) {
+  animation: pulse 1.5s infinite;
 }
 
-.location-line {
-  position: absolute;
-  height: 40px;
-  width: 2px;
-  background-color: #4a76c4;
-  top: 0px;
-}
-.location-korea .location-line {
-  top: 30px;
+/* 중간 크기 원 애니메이션 */
+circle.location-dot:nth-child(2) {
+  animation: ripple 2s infinite;
 }
 
+/* 가장 큰 원 애니메이션 */
+circle.location-dot:nth-child(3) {
+  animation: ripple 2s infinite 0.5s; /* 0.5초 지연 시작 */
+}
+
+/* 깜빡이는 애니메이션 */
 @keyframes pulse {
   0% {
-    transform: scale(1);
     opacity: 1;
+    r: 4;
+  }
+  50% {
+    opacity: 0.8;
+    r: 5;
   }
   100% {
-    transform: scale(3);
+    opacity: 1;
+    r: 4;
+  }
+}
+
+/* 파동 애니메이션 */
+@keyframes ripple {
+  0% {
+    opacity: 0.5;
+    r: 10;
+  }
+  100% {
     opacity: 0;
+    r: 30;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .location-korea {
-    top: 30%;
-    right: 15%;
-  }
-
-  .location-china {
-    top: 45%;
-    right: 25%;
-  }
-
-  .location-label {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .location-korea {
-    top: 30%;
-    right: 10%;
-  }
-
-  .location-china {
-    top: 45%;
-    right: 20%;
-  }
-
-  .location-label {
-    font-size: 12px;
-    padding: 6px 12px;
-  }
-
-  .location-dot {
-    width: 10px;
-    height: 10px;
-  }
-
-  .location-dot::after {
-    width: 16px;
-    height: 16px;
-    top: -3px;
-    left: -3px;
-  }
-}
 .global-contient-wrap {
   padding: 20px 0;
   margin-top: 26px;
@@ -432,4 +359,45 @@
 }
 .global-contient-wrap ul li strong {
   width: 300px;
+}
+@media screen and (max-width: 800px) {
+}
+@media screen and (max-width: 768px) {
+  /*history*/
+  .history-year-wrap .year {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+  }
+  .history-year-wrap .year-info dd {
+    font-size: 14px;
+  }
+  .global-contient-wrap h2 {
+    padding: 16px 0;
+    font-size: 18px;
+  }
+  .global-contient-wrap ul li {
+    padding: 16px 24px;
+    font-size: 14px;
+  }
+  .global-contient-wrap ul li strong {
+    width: 40%;
+  }
+  /*rnd*/
+  .swiper-control-btn {
+    top: 52.5%;
+  }
+  .rnd-center-swiper .inner {
+    padding: 16px;
+  }
+  .rnd-section03 .research-result,
+  .rnd-section03 .research-result:nth-child(2n) {
+    flex-flow: column;
+    gap: 16px 0;
+  }
+  .result-img {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
 }
