@@ -43,10 +43,10 @@ function mainVisualSlider() {
     effect: "fade",
     loop: true,
     speed: 600,
-    // autoplay: {
-    //   delay: delay,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: delay,
+      disableOnInteraction: false,
+    },
 
     observeParents: true,
     observeSlideChildren: true,

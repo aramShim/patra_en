@@ -150,6 +150,13 @@
   .visual-swiper-pagination .swiper-pagination {
     padding: 0 80px;
   }
+  .visual-copy .main-copy {
+    font-size: 42px;
+    line-height: 1.2em;
+  }
+  .visual-swiper-control-btn button {
+    width: 52px;
+  }
 }
 
 @media all and (max-width: 1099.99px) {
@@ -184,9 +191,9 @@
   }
 
   .visual-copy .main-copy {
-    font-size: 42px;
-    line-height: 1.3em;
-    margin-top: -26%;
+    font-size: 38px;
+    line-height: 1.2em;
+    /* margin-top: -26%; */
   }
   .visual-copy .main-copy + p {
     font-size: 28px;
@@ -201,7 +208,13 @@
     height: 32px;
   }
 }
-@media all and (max-width: 640px) {
+@media all and (max-width: 760px) {
+  .visual-copy .main-copy {
+    font-size: 32px;
+  }
+  .visual-swiper-control-btn {
+    bottom: 35%;
+  }
 }
 @media all and (max-width: 532px) {
   .visual-swiper-control-btn {
@@ -213,5 +226,17 @@
   .visual-swiper-pagination .swiper-pagination {
     justify-content: center;
     padding: 0;
+  }
+  .main-visual .swiper-slide {
+    display: block;
+  }
+  .visual-copy {
+    padding: 98px 0;
+  }
+  .main-visual .swiper-slide.swiper-slide-active .main-copy {
+    font-size: 26px;
+    margin-top: 0;
+    text-align: center;
+    /* transform: none; */
   }
 }
