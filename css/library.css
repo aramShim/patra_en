@@ -176,3 +176,44 @@
 .download-btn .vertical-bar {
   height: 28px;
 }
+@media all and (max-width: 1200px) {
+  img {
+    max-width: 100%;
+  }
+  .award-tab1-img span {
+    font-size: 16px;
+  }
+}
+@media all and (max-width: 768px) {
+  .award-wrap .grid.grid-col-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media all and (max-width: 640px) {
+  /*카탈로그*/
+  .catalogue-btn {
+    flex-flow: column;
+    gap: 10px;
+    justify-content: start;
+    align-items: start;
+    max-width: 380px;
+    margin: 20px auto;
+  }
+  .catalogue-btn .btn-outline {
+    width: 100%;
+  }
+  /*project*/
+  .page-project .grid.grid-col-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /*award*/
+  .award-wrap .grid.grid-col-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .video-wrap.grid.grid-col-2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .download-wrap.grid.grid-col-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

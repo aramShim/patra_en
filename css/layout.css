@@ -542,6 +542,9 @@
   text-transform: uppercase;
   transition: all 0.1s;
 }
+.dropdown-header {
+  display: none;
+}
 .sub-link a:hover,
 .sub-link a.active {
   font-weight: 700;
@@ -640,9 +643,7 @@
   .footer-inner {
     margin: 0 80px;
   }
-  .sub-section > .inner {
-    margin: 0 80px;
-  }
+
   .sub-lnav .lnav-list {
     margin: 0 80px;
   }
@@ -655,7 +656,7 @@
   .footer-inner {
     margin: 0 20px;
   }
-  .sub-section > .inner {
+  .sub-inner {
     margin: 0 20px;
   }
 
@@ -839,43 +840,6 @@
   /*sub*/
   .sub-container {
     padding-top: 56px;
-  }
-  .sub-lnav {
-    height: 56px;
-    top: 56px;
-  }
-  .sub-lnav .lnav-inner {
-    height: 56px;
-    transition: none;
-  }
-  .sub-lnav .lnav-inner .lnav-list {
-    float: left;
-    width: 100%;
-    height: 56px;
-  }
-  .sub-lnav .lnav-list {
-    margin: 0;
-    padding: 0 20px;
-  }
-  .sub-lnav a {
-    height: 56px;
-    line-height: 56px;
-    z-index: 1;
-    position: relative;
-  }
-  .sub-lnav a:hover {
-    color: var(--color-gray2);
-  }
-  .sub-lnav.fixed .lnav-inner:after {
-    display: block;
-    content: "";
-    height: 1px;
-    background-color: var(--color-gray9);
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 0;
   }
 
   #footer {
@@ -1179,6 +1143,65 @@
 }
 
 @media all and (max-width: 768px) {
+  img {
+    max-width: 100%;
+  }
+  .sub-link {
+    position: relative;
+  }
+  .sub-link ul {
+    flex-direction: column;
+    display: none; /* 기본적으로는 숨김 */
+  }
+
+  .sub-link ul.show {
+    display: block; /* 클릭 시 표시 */
+    position: absolute;
+    top: 57px;
+    background-color: #2e3341;
+    width: 100%;
+    left: 0;
+    margin: 0;
+  }
+
+  .sub-link ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .sub-link ul li a {
+    display: block;
+    padding: 15px;
+    width: 100%;
+  }
+  .sub-link .flex > li:after {
+    width: 0;
+  }
+
+  /* 드롭다운 헤더 스타일 */
+  .dropdown-header {
+    background-color: #0b111c99;
+    color: white;
+    padding: 15px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+  }
+
+  /* 플러스/마이너스 아이콘 */
+  .dropdown-toggle::after {
+    content: "+";
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .dropdown-toggle.active::after {
+    content: "-";
+  }
 }
 @media all and (max-width: 640px) {
   .footer-inner > .flex {

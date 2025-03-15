@@ -15,6 +15,16 @@ $(document).ready(function () {
   if ($("html.mobile").length > 0) {
     menuClickFunctionStop();
     moMenuAccordion();
+    const dropdownHeader = $(".dropdown-header");
+    const dropdownToggle = $(".dropdown-toggle");
+    const subMenu = $(".sub-link ul");
+
+    if (dropdownHeader) {
+      dropdownHeader.click(function () {
+        subMenu.toggleClass("show");
+        dropdownToggle.toggleClass("active");
+      });
+    }
   }
 
   if ($(".modal-btn").length > 0) {
