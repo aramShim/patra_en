@@ -55,7 +55,9 @@
 
     <!-- JS -->
     <script src="/js/jquery-3.6.4.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
     <script src="/js/aos.js"></script>
     <script src="/js/ui.js"></script>
 
@@ -322,8 +324,14 @@
             <div
               class="sub-title-wrap flex flex-column items-center justify-center"
             >
-              <h2>library</h2>
-              <div class="sub-title-info">CATALOGUE</div>
+              <h2 data-aos="fade-up" data-aos-delay="200">library</h2>
+              <div
+                class="sub-title-info"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                AWARDS AND CERTIFICATIONS
+              </div>
             </div>
             <div class="sub-link">
               <ul class="flex sub-inner">
@@ -353,6 +361,8 @@
                   aria-label="Tabs"
                   role="tablist"
                   aria-orientation="horizontal"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
                 >
                   <button
                     type="button"
@@ -376,7 +386,11 @@
                   </button>
                 </div>
 
-                <div class="tab-content">
+                <div
+                  class="tab-content"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
                   <div id="tab-item-1" role="tabpanel">
                     <div class="grid grid-col-4">
                       <div class="award-tab1-img">

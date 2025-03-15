@@ -55,7 +55,9 @@
 
     <!-- JS -->
     <script src="/js/jquery-3.6.4.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
     <script src="/js/aos.js"></script>
     <script src="/js/ui.js"></script>
 
@@ -322,8 +324,14 @@
             <div
               class="sub-title-wrap flex flex-column items-center justify-center"
             >
-              <h2>library</h2>
-              <div class="sub-title-info">CATALOGUE</div>
+              <h2 data-aos="fade-up" data-aos-delay="200">library</h2>
+              <div
+                class="sub-title-info"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                CATALOGUE
+              </div>
             </div>
             <div class="sub-link">
               <ul class="flex sub-inner">
@@ -347,8 +355,18 @@
           </div>
           <div class="sub-cont">
             <div class="sub-inner">
-              <h3 class="sub-cont-title">2025 PATRA CATALOGUE</h3>
-              <div class="catalogue-wrap">
+              <h3
+                class="sub-cont-title"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                2025 PATRA CATALOGUE
+              </h3>
+              <div
+                class="catalogue-wrap"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
                 <img src="/images/library/catalogue.jpg" alt="" />
                 <div class="flex justify-center items-center catalogue-btn">
                   <a
