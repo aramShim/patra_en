@@ -14,9 +14,34 @@ $(document).ready(function () {
   menuClickFunctionStop();
   moMenuAccordion();
 
-  Modal();
+  if ($(".modal-btn").length > 0) {
+    Modal();
+  }
+  if ($(".tab-btn").length > 0) {
+    tabAction();
+  }
+  AOS.init({
+    duration: 600,
+    once: false,
+  });
+});
+gsap.registerPlugin(ScrollTrigger);
 
-  //탭
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+});
+
+function raf(time) {
+  lenis.raf(time);
+  ScrollTrigger.update();
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+//탭
+function tabAction() {
   $(".tab-btn").click(function () {
     const targetTab = $(this).data("hs-tab"); // 클릭한 버튼의 data-hs-tab 값 (ex: #tab-item-1)
 
@@ -32,7 +57,7 @@ $(document).ready(function () {
   // 초기 로드 시 첫 번째 탭만 표시
   $("[role='tabpanel']").hide();
   $(".tab-btn.active").trigger("click");
-});
+}
 function menuClickFunctionStop() {
   $("#js-toggle").click(function () {
     $("#m-gnav").toggleClass("active");
@@ -57,7 +82,7 @@ function navHover() {
       // 다른 nav-item이 열려 있는지 확인하고, 없으면 #header에서 is-open 제거
       if ($(".nav-item.is-open").length === 0) {
       }
-    },
+    }
   );
 }
 function respond() {
