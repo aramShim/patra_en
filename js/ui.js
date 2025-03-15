@@ -9,10 +9,13 @@ $(document).ready(function () {
 
   scrolled();
   goTopMove();
-
-  navHover();
-  menuClickFunctionStop();
-  moMenuAccordion();
+  if ($("html.pc").length > 0) {
+    navHover();
+  }
+  if ($("html.mobile").length > 0) {
+    menuClickFunctionStop();
+    moMenuAccordion();
+  }
 
   if ($(".modal-btn").length > 0) {
     Modal();
@@ -60,15 +63,17 @@ function tabAction() {
 }
 function menuClickFunctionStop() {
   $("#js-toggle").click(function () {
-    $("#m-gnav").toggleClass("active");
+    // $("#m-gnav").toggleClass("active");
+    $(".gnav-wrap").toggleClass("mo-active");
     $(this).toggleClass("on");
     $("html, body").toggleClass("active-overflow-hidden");
   });
 }
 function moMenuAccordion() {
-  $(".menu_item.has_sub > a").click(function () {
+  $(".nav-item.is-parent .nav-link > a").click(function () {
     $(this).toggleClass("active");
-    $(this).next(".sub-menu").slideToggle();
+    $(this).parents(".nav-link").next(".megamenu-content").slideToggle();
+    //$(this).next(".megamenu-content").slideToggle();
   });
 }
 
@@ -85,6 +90,10 @@ function navHover() {
       }
     }
   );
+  $(".nav-item.is-parent").click(function () {
+    $(this).addClass("is-open"); // 현재 nav-item에 is-open 추가
+    $(this).find(".megamenu-content").addClass("megamenu-visible");
+  });
 }
 function respond() {
   let w = $("html").width();
