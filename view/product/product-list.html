@@ -55,7 +55,9 @@
 
     <!-- JS -->
     <script src="/js/jquery-3.6.4.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
     <script src="/js/aos.js"></script>
     <script src="/js/ui.js"></script>
 
@@ -446,15 +448,21 @@
                   </ul>
                 </div>
                 <div class="product-link-subtitle">
-                  <h2>products</h2>
-                  <div class="sub-title-info">office chair</div>
+                  <h2 data-aos="fade-up" data-aos-delay="200">products</h2>
+                  <div
+                    class="sub-title-info"
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                  >
+                    office chair
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="sub-cont">
             <div class="sub-inner">
-              <div class="breacrumb">
+              <div class="breacrumb" data-aos="fade-up" data-aos-delay="300">
                 <ol class="flex items-center">
                   <li class="flex items-center">
                     Product
@@ -479,7 +487,11 @@
                 </ol>
               </div>
               <div class="product-list-img product-par">
-                <div class="grid grid-col-3">
+                <div
+                  class="grid grid-col-3"
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                >
                   <!--2칸이면 col-span2의 클래스를 갖는다.-->
                   <div class="product-img col-span2">
                     <a href="product-list2.html">
