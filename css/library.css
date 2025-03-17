@@ -89,10 +89,16 @@
 .tab-content {
   padding: 32px 0;
 }
+.award-tab1-img img {
+  border: 1px solid #d9d9d9;
+}
 .award-tab1-img span {
   display: block;
-  font-size: 20px;
-  padding-bottom: 32px;
+  font-size: 18px;
+  text-align: center;
+}
+.award-tab1-img > span {
+  padding: 16px 0 32px;
 }
 .award-tab1-img span .sub-title-info {
   color: #656565;

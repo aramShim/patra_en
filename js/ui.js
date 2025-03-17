@@ -25,6 +25,16 @@ $(document).ready(function () {
         dropdownToggle.toggleClass("active");
       });
     }
+    const productLinkList = $(".product-link-list");
+    const productLinkTitle = $(".product-link-title");
+    const productSubMenu = $(".product-link");
+
+    if (productLinkList) {
+      productLinkTitle.click(function () {
+        productLinkList.toggleClass("is-open");
+        //productSubMenu.toggleClass("active");
+      });
+    }
   }
 
   if ($(".modal-btn").length > 0) {
@@ -72,6 +82,7 @@ function tabAction() {
   $(".tab-btn.active").trigger("click");
 }
 function menuClickFunctionStop() {
+  console.log(1);
   $("#js-toggle").click(function () {
     // $("#m-gnav").toggleClass("active");
     $(".gnav-wrap").toggleClass("mo-active");
@@ -98,7 +109,7 @@ function navHover() {
       // 다른 nav-item이 열려 있는지 확인하고, 없으면 #header에서 is-open 제거
       if ($(".nav-item.is-open").length === 0) {
       }
-    }
+    },
   );
   $(".nav-item.is-parent").click(function () {
     $(this).addClass("is-open"); // 현재 nav-item에 is-open 추가
@@ -107,7 +118,7 @@ function navHover() {
 }
 function respond() {
   let w = $("html").width();
-  w < 1100 ? mobileLayout() : pcLayout();
+  w < 1240 ? mobileLayout() : pcLayout();
 }
 
 function mobileLayout() {

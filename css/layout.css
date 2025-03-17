@@ -152,6 +152,7 @@
 .sub-menu > li {
   flex-shrink: 0;
   max-width: 184px;
+  min-width: 162px;
 }
 .sub-menu > li > a:hover img {
   display: inline-block;
@@ -315,8 +316,8 @@
 }
 
 .sub-menu a {
-  font-size: 16px;
-  padding: 12px 0 12px 16px;
+  font-size: 15px;
+  /* padding: 12px 0 12px 16px; */
   color: #303030;
 }
 
@@ -635,7 +636,8 @@
     flex-flow: column;
     position: fixed;
     width: 100vw;
-    height: calc(100vh - 50px);
+    /* height: calc(100vh - 50px); */
+    height: calc(100svh - 56px);
     overflow-y: auto;
     z-index: 9;
     background-color: #fff;
@@ -711,6 +713,9 @@
     margin: 0;
     display: none;
   }
+  .gnav-wrap.mo-active .nav-item.active .megamenu-content {
+    display: block;
+  }
   .gnav-wrap.mo-active .sub-menu:not(.product-sub) {
     display: block;
   }
@@ -740,7 +745,8 @@
     gap: 0 16px;
   }
   .gnav-wrap.mo-active .search-wrap {
-    padding: 0 20px;
+    padding: 20px;
+    background: #fff;
   }
   .gnav-wrap.mo-active .search-wrap .search-box,
   .gnav-wrap.mo-active .search-wrap .search-box input {

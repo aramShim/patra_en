@@ -31,7 +31,17 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".btn-swiper-next",
     prevEl: ".btn-swiper-prev",
   },
+  breakpoints: {
+    768: {
+      //브라우저가 768보다 클때
+      slidesPerView: 3,
+    },
 
+    1240: {
+      //브라우저가 1024보다 클때
+      slidesPerView: 5,
+    },
+  },
   scrollbar: {
     el: ".swiper-scrollbar",
     draggable: true,
