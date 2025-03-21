@@ -28,6 +28,9 @@
 .history-year-wrap {
   text-align: center;
 }
+.history-year-wrap + .history-year-wrap {
+  padding-top: 56px;
+}
 .history-year-wrap .year {
   background: #fff;
   padding: 10px 32px;
@@ -39,7 +42,7 @@
   z-index: 9;
 }
 .history-year-wrap .year-info {
-  padding: 24px 0;
+  padding: 36px 0;
 }
 .history-year-wrap .year-info img {
   margin: 4px 0;
@@ -165,6 +168,7 @@
   position: relative;
   display: inline-flex;
   flex-flow: column;
+  align-items: center;
 }
 .sub-co-list > li {
   background-color: #fff;
@@ -182,14 +186,13 @@
   border-radius: 20px;
 }
 .sub-co-list > li.co-has-sub .sub-children {
-  padding-top: 16px;
-}
-.sub-co-list > li.co-has-sub .sub-children li {
+  padding: 16px 32px;
   background-color: #f5f5f5;
   border-radius: 15px;
-  margin-bottom: 5px;
+  margin-top: 8px;
+}
+.sub-co-list > li.co-has-sub .sub-children li {
   width: 100%;
-  padding: 8px 16px;
 }
 /**************************************
    rnd
