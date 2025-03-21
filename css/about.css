@@ -443,8 +443,8 @@ circle.location-dot:nth-child(3) {
   /*history*/
   .history-year-wrap .year {
     font-size: 24px;
-    font-weight: bold;
-    display: block;
+    /* font-weight: bold; */
+    /* display: block; */
   }
   .history-year-wrap .year-info dd {
     font-size: 14px;

@@ -111,3 +111,60 @@ ul.sitemap-menu.grid-col-6 {
 .site-sub-menu a:hover {
   color: #353535;
 }
+
+@media screen and (max-width: 768px) {
+  .site-title {
+    font-size: 20px;
+  }
+  ul.sitemap-menu > li > a {
+    font-size: 16px;
+  }
+  .site-sub-menu a {
+    font-size: 14px;
+  }
+  .sitemap-container .grid-col-6 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .sitemap-container .grid-col-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 16px;
+  }
+  .sitemap-wrap {
+    gap: 40px 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .sitemap-container .sub-cont-title {
+    padding: 16px 0;
+  }
+  .site-title {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .site-title span {
+    font-size: 14px;
+  }
+  ul.sitemap-menu > li > a br {
+    display: none;
+  }
+  .sitemap-container .grid-col-6,
+  .sitemap-container .grid-col-4 {
+    grid-template-columns: 1fr;
+  }
+  .site-other-wrap {
+    gap: 32px 0;
+  }
+  ul.sitemap-menu > li {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 16px;
+    margin-bottom: 8px;
+  }
+  .site-sub-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px 8px;
+  }
+}

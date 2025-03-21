@@ -73,7 +73,7 @@
   box-sizing: border-box;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 100%;
   max-width: 1200px;
   position: relative;
   transition: all 0.3s;
@@ -81,7 +81,7 @@
 
 .header-inner h1 a {
   display: flex;
-  width: 114px;
+  width: 112px;
   height: auto;
   background: url(../images/patra_logo.svg) center center / 100% auto no-repeat;
   text-align: left;
@@ -225,8 +225,9 @@
   margin: -10px 0 0 -10px;
 }
 
-#header.scrolled {
+.pc #header.scrolled {
   background-color: #fff;
+  height: 80px;
 }
 .scrolled h1 a {
   background-image: url(../images/patra_logo.png);
