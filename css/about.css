@@ -259,6 +259,68 @@
 .swiper-control-btn button:active svg {
   transform: scale(0.8);
 }
+
+.rnd-section02 {
+  background: url(../images/about/rand-bg.jpg) no-repeat center center/cover;
+  padding: 100px 0;
+}
+.step-wrap {
+  color: #fff;
+  padding: 52px 0;
+  position: relative;
+}
+.step-wrap .step {
+  width: 12%;
+}
+
+.step-wrap .step span {
+  display: inline-block;
+  padding: 8px 24px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  position: relative;
+  font-size: 20px;
+}
+.step-wrap:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 50%;
+  border: 1px dashed transparent;
+  border-left-color: #fff;
+  top: 100px;
+  left: 54px;
+}
+.step-wrap:after {
+  content: "";
+  width: 8px; /* 사이즈 */
+  height: 8px; /* 사이즈 */
+  border-top: 1px solid #fff; /* 선 두께 */
+  border-right: 1px solid #fff; /* 선 두께 */
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  left: 50px;
+  transform: rotate(135deg);
+}
+.step-wrap:nth-last-of-type(1):before,
+.step-wrap:nth-last-of-type(1)::after {
+  opacity: 0;
+}
+.step-nm {
+  text-align: left;
+  width: 36%;
+  font-weight: 700;
+  font-size: 28px;
+}
+.step-wrap .step-info {
+  width: 52%;
+}
+
+.rnd-section03 {
+  padding: 100px 0;
+}
 .rnd-section03 .research-result {
   gap: 0 26px;
   padding: 40px 0;
@@ -292,12 +354,21 @@
   max-width: 100%;
 }
 line.location-line {
-  stroke: #4a76c4;
+  stroke: #577abd;
   stroke-width: 2;
 }
 /* 기본 원 스타일 */
 .location-dot {
   fill: #577abd; /* 원하는 색상으로 변경 가능 */
+}
+
+line.location-line.china {
+  stroke: #db5c5c;
+  stroke-width: 2;
+}
+/* 기본 원 스타일 */
+.location-dot.china {
+  fill: #db5c5c; /* 원하는 색상으로 변경 가능 */
 }
 
 /* 중앙 원(가장 작은 원) 애니메이션 */
@@ -319,15 +390,14 @@ circle.location-dot:nth-child(3) {
 @keyframes pulse {
   0% {
     opacity: 1;
-    r: 4;
+    r: 6;
   }
   50% {
-    opacity: 0.8;
-    r: 5;
+    r: 8;
   }
   100% {
     opacity: 1;
-    r: 4;
+    r: 6;
   }
 }
 
