@@ -45,7 +45,7 @@ $(document).ready(function () {
   }
   AOS.init({
     duration: 600,
-    once: false,
+    once: true,
   });
 });
 gsap.registerPlugin(ScrollTrigger);
@@ -109,7 +109,7 @@ function navHover() {
       // 다른 nav-item이 열려 있는지 확인하고, 없으면 #header에서 is-open 제거
       if ($(".nav-item.is-open").length === 0) {
       }
-    },
+    }
   );
   $(".nav-item.is-parent").click(function () {
     $(this).addClass("is-open"); // 현재 nav-item에 is-open 추가
