@@ -229,6 +229,9 @@
   background-color: #fff;
   height: 80px;
 }
+.pc .header.scrolled .megamenu-content {
+  top: 80px;
+}
 .scrolled h1 a {
   background-image: url(../images/patra_logo.png);
 }
