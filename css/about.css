@@ -120,6 +120,7 @@
 }
 .organization-sub {
   align-items: start;
+  gap: 0 16px;
 }
 .sub-section {
   position: relative;
@@ -141,18 +142,14 @@
 .sub-top {
   border: 1px solid #999;
   background-color: #f7f7f7;
-  padding: 16px 32px 16px 84px;
+  padding: 16px 32px;
   border-radius: 50px;
   text-transform: uppercase;
   position: relative;
-  background-image: url(/images/about/korea.png);
-  background-position: left 16px center;
-  background-repeat: no-repeat;
   text-align: left;
+  gap: 0 16px;
 }
-.sub3 .sub-top {
-  background-image: url(/images/about/china.png);
-}
+
 .sub-top span {
   display: block;
   font-weight: 500;
@@ -163,6 +160,9 @@
   font-weight: 700;
   color: #656565;
   font-size: 16px;
+}
+.sub-top b br {
+  display: none;
 }
 .sub-co-list {
   position: relative;
@@ -437,9 +437,40 @@ circle.location-dot:nth-child(3) {
 .global-contient-wrap ul li strong {
   width: 300px;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
+  .sub-top {
+    flex-flow: column;
+    text-align: center;
+    padding: 16px;
+    gap: 16px 0;
+    border-radius: 20px;
+  }
+  .sub-top b br {
+    display: block;
+  }
 }
 @media screen and (max-width: 768px) {
+  .organization-wrap .organization-top {
+    font-size: 18px;
+  }
+  .sub-top {
+    border-radius: 16px;
+    padding: 16px 8px;
+  }
+  .sub-top span {
+    font-size: 16px;
+  }
+  .sub-top b {
+    font-size: 14px;
+    line-height: 1.2;
+    display: inline-block;
+  }
+  .sub-co-list > li {
+    padding: 8px;
+    width: 100%;
+    border-radius: 12px;
+  }
+
   /*history*/
   .history-year-wrap .year {
     font-size: 24px;
