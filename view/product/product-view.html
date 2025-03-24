@@ -479,95 +479,22 @@
               </div>
 
               <!--상세페이지 시작-->
-              <div class="product-view-wrap">
+              <div class="product-view-wrap relative">
                 <!--제품사진-->
-                <div
-                  class="flex justify-between"
-                  data-aos="fade-up"
-                  data-aos-delay="500"
-                >
-                  <div class="product-img-left">
-                    <div
-                      style="
-                        --swiper-navigation-color: #fff;
-                        --swiper-pagination-color: #fff;
-                      "
-                      class="swiper mySwiper2"
-                    >
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <img src="/images/product/product-volf-3.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="/images/product/C6511W-L_0.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="/images/product/C6511W-L_90.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="/images/product/C6511W-L_135.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="/images/product/C6511W-L_180.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="/images/product/C6511W-L_725_45.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="/images/product/C6511W-L_730_45.jpg" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product-img-right flex flex-column">
-                    <div class="product-nm">
-                      <h2>VOFL Series</h2>
-                      <h3>C6511W-L</h3>
-                    </div>
-                    <div class="swiper-thumb-wrap">
-                      <div class="flex swiper-thumb-btn">
-                        <button
-                          class="btn-swiper-prev"
-                          type="button"
-                          tabindex="-1"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="42"
-                            height="42"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="lucide lucide-chevron-left"
-                          >
-                            <path d="m15 18-6-6 6-6" />
-                          </svg>
-                        </button>
-                        <button
-                          class="btn-swiper-next"
-                          type="button"
-                          tabindex="-1"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="42"
-                            height="42"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="lucide lucide-chevron-right"
-                          >
-                            <path d="m9 18 6-6-6-6" />
-                          </svg>
-                        </button>
-                      </div>
-                      <div thumbsSlider="" class="swiper mySwiper">
+                <div class="product-img-wrap relative">
+                  <div
+                    class="product-img relative flex justify-between"
+                    data-aos="fade-up"
+                    data-aos-delay="500"
+                  >
+                    <div class="product-img-left">
+                      <div
+                        style="
+                          --swiper-navigation-color: #fff;
+                          --swiper-pagination-color: #fff;
+                        "
+                        class="swiper mySwiper2"
+                      >
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <img src="/images/product/product-volf-3.jpg" />
@@ -591,9 +518,84 @@
                             <img src="/images/product/C6511W-L_730_45.jpg" />
                           </div>
                         </div>
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-scrollbar"></div>
                       </div>
+                    </div>
+                    <div class="product-img-right">
+                      <div class="product-nm">
+                        <h2>VOFL Series</h2>
+                        <h3>C6511W-L</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-thumb-wrap">
+                    <div class="flex swiper-thumb-btn">
+                      <button
+                        class="btn-swiper-prev"
+                        type="button"
+                        tabindex="-1"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="42"
+                          height="42"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-chevron-left"
+                        >
+                          <path d="m15 18-6-6 6-6" />
+                        </svg>
+                      </button>
+                      <button
+                        class="btn-swiper-next"
+                        type="button"
+                        tabindex="-1"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="42"
+                          height="42"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-chevron-right"
+                        >
+                          <path d="m9 18 6-6-6-6" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div thumbsSlider="" class="swiper mySwiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img src="/images/product/product-volf-3.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/images/product/C6511W-L_0.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/images/product/C6511W-L_90.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/images/product/C6511W-L_135.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/images/product/C6511W-L_180.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/images/product/C6511W-L_725_45.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/images/product/C6511W-L_730_45.jpg" />
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                      <div class="swiper-scrollbar"></div>
                     </div>
                   </div>
                 </div>

@@ -135,6 +135,35 @@ ul.sitemap-menu.grid-col-6 {
   }
 }
 @media screen and (max-width: 576px) {
+  /*contact*/
+  .sub-title-wrap .sub-title-info.flex {
+    flex-flow: column;
+  }
+  .sub-title-wrap .sub-title-info.flex .vertical-bar {
+    display: none;
+  }
+  .office-wrap .grid2 {
+    flex-flow: column;
+    gap: 16px 0;
+  }
+  .office-wrap .grid2 > div {
+    width: 100%;
+  }
+  .office-mail > .flex {
+    flex-flow: column;
+    /* gap: 16px 0; */
+  }
+  .office-mail > .flex > .vertical-bar {
+    display: none;
+  }
+  .office-global {
+    flex-flow: column;
+  }
+  .office-global .vertical-bar {
+    display: none;
+  }
+
+  /*sitemap*/
   .sitemap-container .sub-cont-title {
     padding: 16px 0;
   }

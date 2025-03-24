@@ -54,6 +54,9 @@
 .col-span2 {
   grid-column: span 2;
 }
+.relative {
+  position: relative;
+}
 /* header */
 #header {
   height: 100px;
