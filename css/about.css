@@ -551,6 +551,23 @@ circle.location-dot:nth-child(3) {
   }
 }
 @media screen and (max-width: 480px) {
+  .organization-sub .sub-section {
+    width: 32%;
+  }
+  .sub-co-list {
+    width: 100%;
+  }
+  .sub-co-list > li {
+    font-size: 14px;
+    word-break: break-word;
+  }
+  .sub-co-list > li.co-has-sub .sub-children {
+    padding: 8px;
+    font-size: 12px;
+  }
+  .sub-co-list > li.co-has-sub {
+    border-radius: 12px;
+  }
   .rnd-section02 {
     padding: 64px 0;
   }
