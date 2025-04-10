@@ -59,6 +59,7 @@
   display: flex;
   flex-flow: column;
   height: 100%;
+  text-transform: uppercase;
 }
 .prize-list.flex {
   margin-top: auto;
