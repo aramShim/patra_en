@@ -85,6 +85,20 @@
   position: relative;
   display: block;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: #f3f3f3;
+}
+.product-img a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #707070;
+  opacity: 0.085;
+  width: 100%;
+  height: 100%;
 }
 .product-par .product-img span {
   position: absolute;

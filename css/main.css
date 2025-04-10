@@ -46,7 +46,7 @@
   z-index: 10;
 }
 .visual-copy .main-copy {
-  font-size: 52px;
+  font-size: 45px;
   font-weight: 400;
   line-height: 1.2;
   color: var(--color-gray1);
@@ -151,7 +151,7 @@
     padding: 0 80px;
   }
   .visual-copy .main-copy {
-    font-size: 42px;
+    font-size: 36px;
     line-height: 1.2em;
   }
   .visual-swiper-control-btn button {
@@ -191,7 +191,7 @@
   }
 
   .visual-copy .main-copy {
-    font-size: 38px;
+    font-size: 32px;
     line-height: 1.2em;
     /* margin-top: -26%; */
   }
@@ -210,7 +210,7 @@
 }
 @media all and (max-width: 760px) {
   .visual-copy .main-copy {
-    font-size: 32px;
+    font-size: 28px;
   }
   .visual-swiper-control-btn {
     bottom: 35%;
@@ -234,7 +234,7 @@
     padding: 98px 0;
   }
   .main-visual .swiper-slide.swiper-slide-active .main-copy {
-    font-size: 26px;
+    font-size: 24px;
     margin-top: 0;
     text-align: center;
     /* transform: none; */

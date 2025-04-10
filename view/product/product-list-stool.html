@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <meta content="telephone=no" name="format-detection" />
+
+    <!--네이버 서치어드바이저-->
+    <meta content="" name="naver-site-verification" />
+
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta name="description" content="" />
+
+    <!-- iOS 아이콘 설정 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="icon.png" />
+
+    <!-- iOS 상태바 색상 설정 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <!-- Android에서 PWA 기능 활성화 -->
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Google Chrome에서 자동 전화번호 링크 방지 -->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- PWA (Progressive Web App) 관련 설정 -->
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- favicon 설정 -->
+
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/common.css" type="text/css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="/css/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/css/aos.css" type="text/css" />
+
+    <!-- JS -->
+    <script src="/js/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
+    <script src="/js/aos.js"></script>
+    <script src="/js/ui.js"></script>
+
+    <title>patra</title>
+  </head>
+  <body>
+    <div class="patra-wrap">
+      <div class="skip-nav">
+        <ul>
+          <li><a href="#container">본문 바로가기</a></li>
+          <li><a href="#gnav">주메뉴 바로가기</a></li>
+          <li><a href="#footer">푸터 바로가기</a></li>
+        </ul>
+      </div>
+      <!-- HTML 부분 -->
+      <header id="header" class="header">
+        <div class="header-inner">
+          <h1><a href="/index.html">파트라</a></h1>
+          <div class="m-menu">
+            <div id="js-toggle" class="toggle-menu">
+              <div class="menu-line"></div>
+            </div>
+          </div>
+          <div class="gnav-wrap flex align-center">
+            <div class="search-wrap">
+              <div class="search-box">
+                <form action="">
+                  <label for="searchItem" class="hidden">검색어입력</label>
+                  <input id="searchItem" class="hd-search-input" type="text" />
+                  <button type="submit" class="search-btn" title="검색">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="m21 21-4.3-4.3" />
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+            <nav id="gnav" data-lenis-prevent>
+              <ul class="gnav-list">
+                <li class="nav-item is-parent active">
+                  <span class="nav-link">
+                    <a href="javascript:void(0);" class="en"><b>products</b></a>
+                  </span>
+                  <div class="megamenu-content">
+                    <div class="sub-menu-list">
+                      <ul class="sub-menu flex justify-center product-sub">
+                        <li>
+                          <a href="/view/product/product-list.html">
+                            <img src="/images/nav-sub/product1.png" alt="" />
+                            <span>OFFICE CHAIR</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/view/product/product-list-multipurpose.html"
+                          >
+                            <img src="/images/nav-sub/product2.png" alt="" />
+                            <span>MULTIPURPOSE CHAIR</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/view/product/product-list-waiting.html">
+                            <img src="/images/nav-sub/product3.png" alt="" />
+                            <span>WAITING CHAIR</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/view/product/product-list-stool.html">
+                            <img src="/images/nav-sub/product4.png" alt="" />
+                            <span>STOOL</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/view/product/product-list-tables.html">
+                            <img src="/images/nav-sub/product5.png" alt="" />
+                            <span>TABLES</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/view/product/product-list-accesories.html">
+                            <img src="/images/nav-sub/product6.png" alt="" />
+                            <span>ACCESORIES</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="view-all">
+                      <a href="" class="flex items-center justify-center">
+                        <span>VIEW ALL</span>
+                        <i class="bi bi-chevron-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item is-parent">
+                  <span class="nav-link">
+                    <a href="javascript:void(0);" class="en"><b>library</b></a>
+                  </span>
+                  <div class="megamenu-content">
+                    <div class="sub-menu-list">
+                      <ul class="sub-menu flex justify-center">
+                        <li>
+                          <a href="/view/library/catalogue.html">
+                            <img src="/images/nav-sub/library1.png" alt="" />
+                            <span>CATALOGUE</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/view/library/projects.html">
+                            <img src="/images/nav-sub/library2.png" alt="" />
+                            <span>PROJECT</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/view/library/award.html">
+                            <img src="/images/nav-sub/library3.png" alt="" />
+                            <span>AWARDS AND CERTIFICATION</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/view/library/videos.html">
+                            <img src="/images/nav-sub/library4.png" alt="" />
+                            <span>VIDEOS</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/view/library/download.html">
+                            <img src="/images/nav-sub/library5.png" alt="" />
+                            <span>2D&3D FILES DOWNLOAD</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item is-parent">
+                  <span class="nav-link">
+                    <a href="javascript:void(0);" class="en"><b>about us</b></a>
+                  </span>
+                  <div class="megamenu-content">
+                    <div class="sub-menu-list">
+                      <ul class="sub-menu flex justify-center">
+                        <li>
+                          <a href="/view/about/history.html">
+                            <img src="/images/nav-sub/aboutus1.png" alt="" />
+                            <span>OUR HISTORY</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/view/about/organization.html">
+                            <img src="/images/nav-sub/aboutus2.png" alt="" />
+                            <span>ORGANIZATION</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/view/about/randd.html">
+                            <img src="/images/nav-sub/aboutus3.png" alt="" />
+                            <span>R&D</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/view/about/network.html">
+                            <img src="/images/nav-sub/aboutus4.png" alt="" />
+                            <span>GLOBAL NETWORK</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <span class="nav-link">
+                    <a href="/view/contact.html" class="en">contact us</a>
+                  </span>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <div id="container" class="container">
+        <!--섹션영역-->
+        <div class="sub-container">
+          <link rel="stylesheet" href="/css/product.css" />
+          <div class="sub-banner">
+            <div class="sub-title-wrap">
+              <div class="sub-inner flex">
+                <div class="product-link-list">
+                  <div class="product-link-title">products</div>
+                  <ul class="product-link">
+                    <li>
+                      <a href="/view/product/product-list.html">office chair</a>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="0.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-chevron-right"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </li>
+                    <li>
+                      <a href="/view/product/product-list-multipurpose.html">
+                        multipurpose chair
+                      </a>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="0.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-chevron-right"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </li>
+                    <li>
+                      <a href="/view/product/product-list-waiting.html">
+                        waiting chair
+                      </a>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="0.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-chevron-right"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </li>
+                    <li>
+                      <a
+                        href="/view/product/product-list-stool.html"
+                        class="active"
+                      >
+                        stool
+                      </a>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="0.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-chevron-right"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </li>
+                    <li>
+                      <a href="/view/product/product-list-tables.html">
+                        tables
+                      </a>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="0.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-chevron-right"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </li>
+                    <li>
+                      <a href="/view/product/product-list-accesories.html">
+                        accesories
+                      </a>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="0.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-chevron-right"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </li>
+                    <li>
+                      <a href="">view all</a>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="0.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-chevron-right"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+                <div class="product-link-subtitle">
+                  <h2 data-aos="fade-up" data-aos-delay="200">products</h2>
+                  <div
+                    class="sub-title-info"
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                  >
+                    office chair
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-cont">
+            <div class="sub-inner">
+              <div class="breacrumb" data-aos="fade-up" data-aos-delay="300">
+                <ol class="flex items-center">
+                  <li class="flex items-center">
+                    Product
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="0.75"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-chevron-right"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </li>
+                  <li class="current-category">
+                    <a href="/view/product/product-list.html">office chair</a>
+                  </li>
+                </ol>
+              </div>
+              <div class="product-list-img product-par">
+                <div
+                  class="grid grid-col-3"
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                >
+                  <div class="product-img">
+                    <a href="product-list2.html">
+                      <img src="/images/product/products/volf.jpg" alt="" />
+                      <span>Volf</span>
+                    </a>
+                  </div>
+                  <div class="product-img">
+                    <a href="">
+                      <img src="/images/product/products/kyle.jpg" alt="" />
+                      <span>KYLE</span>
+                    </a>
+                  </div>
+                  <div class="product-img">
+                    <a href="">
+                      <img src="/images/product/products/lavo.jpg" alt="" />
+                      <span>LAVO</span>
+                    </a>
+                  </div>
+                  <div class="product-img">
+                    <a href="">
+                      <img src="/images/product/products/lavo-m.jpg" alt="" />
+                      <span>LAVO-M</span>
+                    </a>
+                  </div>
+                  <div class="product-img">
+                    <a href="">
+                      <img src="/images/product/products/pixi.jpg" alt="" />
+                      <span>PIXI</span>
+                    </a>
+                  </div>
+                  <div class="product-img">
+                    <a href="">
+                      <img src="/images/product/products/kindl.jpg" alt="" />
+                      <span>KINDL</span>
+                    </a>
+                  </div>
+                  <div class="product-img">
+                    <a href="">
+                      <img src="/images/product/products/libra.jpg" alt="" />
+                      <span>LIBRA</span>
+                    </a>
+                  </div>
+                  <div class="product-img">
+                    <a href="">
+                      <img src="/images/product/products/flo.jpg" alt="" />
+                      <span>FLO</span>
+                    </a>
+                  </div>
+                  <div class="product-img">
+                    <a href="">
+                      <img src="/images/product/products/flex.jpg" alt="" />
+                      <span>FLEX</span>
+                    </a>
+                  </div>
+                  <div class="product-img">
+                    <a href="">
+                      <img src="/images/product/products/fortis.jpg" alt="" />
+                      <span>FORTIS</span>
+                    </a>
+                  </div>
+                  <div class="product-img">
+                    <a href="">
+                      <img src="/images/product/products/mono.jpg" alt="" />
+                      <span>MONO</span>
+                    </a>
+                  </div>
+                  <div class="product-img">
+                    <a href="">
+                      <img
+                        src="/images/product/products/mono-mesh.jpg"
+                        alt=""
+                      />
+                      <span>MONO MESH</span>
+                    </a>
+                  </div>
+                  <div class="product-img">
+                    <a href="">
+                      <img src="/images/product/products/skin.jpg" alt="" />
+                      <span>SKIN</span>
+                    </a>
+                  </div>
+                  <div class="product-img">
+                    <a href="">
+                      <img src="/images/product/products/marin.jpg" alt="" />
+                      <span>MARIN</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer id="footer" class="footer">
+        <div class="footer-inner">
+          <div class="flex justify-between">
+            <div class="footer-left">
+              <div class="footer-logo">
+                <img src="/images/patra_f_logo.png" alt="" />
+              </div>
+              <div class="footer-link">
+                <a href="/view/about/history.html">ABOUT US</a>
+                <hr
+                  class="vertical-bar inline-block border-none w-[1px] h-3 bg-[#666]"
+                />
+                <a href="/view/contact.html">CONTACT US</a>
+              </div>
+              <div class="footer-family flex items-center">
+                <span>Family site</span>
+                <div class="flex items-center korea-logo">
+                  <img src="/images/korea.png" alt="" />
+                  <a href="https://patrakorea.com/" target="_blank">PATRA</a>
+                </div>
+                <a href="/view/sitemap.html">Site map</a>
+              </div>
+            </div>
+            <div class="footer-right">
+              <div class="flex items-center footer-tel">
+                <dl class="flex items-center">
+                  <dt>TEL :</dt>
+                  <dd>+82-2-469-2214</dd>
+                </dl>
+                <dl class="flex items-center">
+                  <dt>FAX :</dt>
+                  <dd>+82-2-469-2216</dd>
+                </dl>
+              </div>
+              <div class="flex items-center">
+                <dl class="flex items-center">
+                  <dt>E-MAIL :</dt>
+                  <dd class="footer-email">
+                     
+                    <a href="">info@patrainc.com</a>
+                     / 
+                    <a href="">seoul@patrainc.com</a>
+                  </dd>
+                </dl>
+              </div>
+              <p class="footer-address">
+                118-22, Wanjangcheon-ro, Namsa-eup, Cheoin-gu,
+                <br />
+                Yongin-si, Gyeonggi-do, 17121, Republic of Korea
+              </p>
+            </div>
+          </div>
+          <p class="footer-copy">
+            Copyright © 2025 Patra Inc. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
