@@ -82,6 +82,12 @@
   object-fit: cover;
   transition: all 0.3s;
 }
+.product-par .product-img {
+  display: flex;
+  flex-flow: column;
+  gap: 16px 0;
+  font-size: 18px;
+}
 .product-img a {
   position: relative;
   display: block;
@@ -101,27 +107,9 @@
   width: 100%;
   height: 100%;
 }
+
 .product-par .product-img span {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  padding: 16px;
-  background-color: #00000099;
-  color: #fff;
-  font-size: 24px;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: all 0.5s;
-}
-.product-par .product-img a:hover span {
-  opacity: 1;
+  padding-bottom: 16px;
 }
 .product-img a > div.product-img-wrap {
   width: 100%;
