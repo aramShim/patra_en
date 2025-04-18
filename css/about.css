@@ -203,6 +203,9 @@
   margin: 0 auto;
   position: relative;
 }
+.swiper-wrapper {
+  height: fit-content;
+}
 .rnd-center-swiper .swiper-slide {
   /* padding-top: 42.8%; */
   padding-top: 340px;
