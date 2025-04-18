@@ -176,6 +176,7 @@
 .swiper-thumb-wrap .swiper,
 .swiper-thumb-wrap .swiper-wrapper {
   width: 100%;
+  height: fit-content;
 }
 .swiper-thumb-wrap .swiper-slide {
   cursor: pointer;
@@ -187,6 +188,7 @@
 }
 .swiper-thumb-wrap .swiper-slide img {
   max-width: 183px;
+  width: 100%;
 }
 .swiper-thumb-wrap .swiper-pagination {
   position: unset;
