@@ -82,7 +82,7 @@
   object-fit: cover;
   transition: all 0.3s;
 }
-.product-par .product-img {
+.product-img {
   display: flex;
   flex-flow: column;
   gap: 16px 0;
@@ -96,7 +96,7 @@
   height: 100%;
   background: #f3f3f3;
 }
-.product-img a:after {
+.product-par .product-img a:after {
   content: "";
   display: block;
   position: absolute;
@@ -108,7 +108,7 @@
   height: 100%;
 }
 
-.product-par .product-img span {
+.product-img span {
   padding-bottom: 16px;
 }
 .product-img a > div.product-img-wrap {
