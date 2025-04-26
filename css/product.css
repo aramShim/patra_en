@@ -263,6 +263,9 @@
 .detail-img + p {
   padding: 8px 0;
 }
+.dimensions-wrap .detail-wrap {
+  width: 70%;
+}
 /*color*/
 .color-title {
   font-size: 18px;
@@ -436,4 +439,7 @@
   }
 }
 @media all and (max-width: 576px) {
+  .dimensions-wrap .detail-wrap {
+    width: 100%;
+  }
 }
