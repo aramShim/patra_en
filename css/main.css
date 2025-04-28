@@ -231,12 +231,12 @@
     display: block;
   }
   .visual-copy {
-    padding: 98px 0;
+    padding: 98px 20px;
   }
   .main-visual .swiper-slide.swiper-slide-active .main-copy {
     font-size: 24px;
     margin-top: 0;
-    text-align: center;
+    /* text-align: center; */
     /* transform: none; */
   }
 }
